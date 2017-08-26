@@ -11813,10 +11813,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>           <span class="c1"># integer</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>           <span class="c1"># integer</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">5.0</span>         <span class="c1"># float</span>
 <span class="n">c</span> <span class="o">=</span> <span class="mf">8.3e5</span>       <span class="c1"># exponential</span>
-<span class="n">d</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">+</span> <span class="mf">0.5j</span>  <span class="c1"># complex</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">+</span> <span class="mf">0.5</span><span class="n">j</span>  <span class="c1"># complex</span>
 <span class="n">e</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">&gt;</span> <span class="mi">5</span>       <span class="c1"># boolean</span>
 <span class="n">f</span> <span class="o">=</span> <span class="s1">&#39;word&#39;</span>      <span class="c1"># string</span>
 </pre></div>
@@ -11840,12 +11840,12 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">]</span>      <span class="c1"># manually initialization</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">]</span>      <span class="c1"># manually initialization</span>
 <span class="n">b</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>                      <span class="c1"># initialization through a function</span>
 <span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="n">nu</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">nu</span> <span class="ow">in</span> <span class="n">b</span><span class="p">]</span>           <span class="c1"># initialize through list comprehension</span>
-<span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="n">nu</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">nu</span> <span class="ow">in</span> <span class="n">b</span> <span class="k">if</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">]</span>  <span class="c1"># list comprehension with condition</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="n">nu</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">nu</span> <span class="ow">in</span> <span class="n">b</span> <span class="k">if</span> <span class="n">nu</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">]</span> <span class="c1"># list comprehension with condition</span>
 <span class="n">e</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>                          <span class="c1"># access element</span>
-<span class="n">f</span> <span class="o">=</span> <span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span> <span class="mi">2</span><span class="p">]</span>                       <span class="c1"># access a slice of the list</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>                        <span class="c1"># access a slice of the list</span>
 <span class="n">g</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;re&#39;</span><span class="p">,</span> <span class="s1">&#39;bl&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;gr&#39;</span><span class="p">]</span>         <span class="c1"># list concatenation</span>
 <span class="n">h</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;re&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span>                    <span class="c1"># repeat a list</span>
 <span class="p">[</span><span class="s1">&#39;re&#39;</span><span class="p">,</span> <span class="s1">&#39;bl&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;re&#39;</span><span class="p">)</span>          <span class="c1"># returns index of &#39;re&#39;</span>
@@ -11873,9 +11873,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;red&#39;</span><span class="p">:</span> <span class="s1">&#39;rouge&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">:</span> <span class="s1">&#39;bleu&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">:</span> <span class="s1">&#39;vert&#39;</span><span class="p">}</span>  <span class="c1"># dictionary</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;red&#39;</span><span class="p">:</span> <span class="s1">&#39;rouge&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">:</span> <span class="s1">&#39;bleu&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">:</span> <span class="s1">&#39;vert&#39;</span><span class="p">}</span>  <span class="c1"># dictionary</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">]</span>                                           <span class="c1"># translate item</span>
-<span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="n">value</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">b</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>                <span class="c1"># loop through contents</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="n">value</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">a</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>                <span class="c1"># loop through contents</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;no translation found&#39;</span><span class="p">)</span>            <span class="c1"># return default</span>
 </pre></div>
 
@@ -11898,7 +11898,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span>                      <span class="c1"># assignment</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span>                      <span class="c1"># assignment</span>
 <span class="n">char</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>                    <span class="c1"># access individual characters</span>
 <span class="s1">&#39;red &#39;</span> <span class="o">+</span> <span class="s1">&#39;blue&#39;</span>                <span class="c1"># string concatenation</span>
 <span class="s1">&#39;1, 2, three&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>       <span class="c1"># split string into list</span>
@@ -11924,15 +11924,16 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>             <span class="c1"># assignment</span>
-<span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">(</span><span class="o">*=</span><span class="p">,</span> <span class="o">/=</span><span class="p">)</span>   <span class="c1"># change and assign</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>             <span class="c1"># assignment</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>         <span class="c1"># assign a list</span>
+<span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>            <span class="c1"># change and assign, try also `*=` and `/=`</span>
 <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span>             <span class="c1"># addition</span>
 <span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span>             <span class="c1"># integer division (python2) or float division (python3)</span>
 <span class="mi">3</span> <span class="o">//</span> <span class="mi">2</span>            <span class="c1"># integer division</span>
 <span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span>             <span class="c1"># multiplication</span>
 <span class="mi">3</span> <span class="o">**</span> <span class="mi">2</span>            <span class="c1"># exponent</span>
 <span class="mi">3</span> <span class="o">%</span> <span class="mi">2</span>             <span class="c1"># remainder</span>
-<span class="nb">abs</span><span class="p">()</span>             <span class="c1"># absolute value</span>
+<span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>           <span class="c1"># absolute value</span>
 <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span>            <span class="c1"># equal</span>
 <span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">1</span>             <span class="c1"># larger</span>
 <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span>             <span class="c1"># smaller</span>
@@ -11963,30 +11964,30 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># if/elif/else</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># if/elif/else</span>
 <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
 <span class="k">if</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-    <span class="k">print</span> <span class="s1">&#39;True&#39;</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;True&#39;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="k">print</span> <span class="s1">&#39;False&#39;</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;False&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span> <span class="s1">&#39;?&#39;</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;?&#39;</span><span class="p">)</span>
 
 <span class="c1"># for</span>
 <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
-    <span class="k">print</span> <span class="n">color</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">color</span><span class="p">)</span>
 
 <span class="c1"># while</span>
 <span class="n">number</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">while</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="k">print</span> <span class="n">number</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">number</span><span class="p">)</span>
     <span class="n">number</span> <span class="o">+=</span> <span class="mi">1</span>
 
 <span class="c1"># break</span>
 <span class="n">number</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-    <span class="k">print</span> <span class="n">number</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">number</span><span class="p">)</span>
     <span class="n">number</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
         <span class="k">break</span>
@@ -11995,7 +11996,7 @@ div#notebook {
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">continue</span>
-    <span class="k">print</span> <span class="n">i</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12017,18 +12018,19 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Function</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Function</span>
 <span class="k">def</span> <span class="nf">myfunc</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span>
+    <span class="k">return</span> <span class="n">a1</span> <span class="o">*</span> <span class="n">a2</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="n">my_function</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">)</span>
+<span class="n">a1</span><span class="p">,</span> <span class="n">a2</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">myfunc</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">)</span>
 
 <span class="c1"># Class</span>
 <span class="k">class</span> <span class="nc">Point</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 
@@ -12047,12 +12049,12 @@ div#notebook {
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">f</span> <span class="o">=</span> <span class="n">f</span>
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s2">&quot;call&quot;</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;call&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">()</span>
 
 <span class="nd">@myDecorator</span>
 <span class="k">def</span> <span class="nf">my_funct</span><span class="p">():</span>
-    <span class="k">print</span> <span class="s1">&#39;func&#39;</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;func&#39;</span><span class="p">)</span>
 
 <span class="n">my_funct</span><span class="p">()</span>
 </pre></div>
@@ -12085,7 +12087,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="o">&lt;</span><span class="nb">object</span><span class="o">&gt;</span><span class="err">?</span>  <span class="c1"># Information about the object</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">&lt;</span><span class="nb">object</span><span class="o">&gt;</span><span class="err">?</span>       <span class="c1"># Information about the object</span>
 <span class="o">&lt;</span><span class="nb">object</span><span class="o">&gt;.&lt;</span><span class="n">TAB</span><span class="o">&gt;</span>  <span class="c1"># tab completion</span>
 
 <span class="c1"># measure runtime of a function:</span>
@@ -12097,9 +12099,9 @@ div#notebook {
 <span class="o">%</span><span class="k">run</span> -d  # run in debug mode
 <span class="o">%</span><span class="k">run</span> -t  # measures execution time
 <span class="o">%</span><span class="k">run</span> -p  # runs a profiler
-<span class="o">%</span><span class="k">debug</span>  # jumps to the debugger after an exception
+<span class="o">%</span><span class="k">debug</span>   # jumps to the debugger after an exception
 
-<span class="o">%</span><span class="k">pdb</span>  # run debugger automatically on exception
+<span class="o">%</span><span class="k">pdb</span>     # run debugger automatically on exception
 
 <span class="c1"># examine history</span>
 <span class="o">%</span><span class="k">history</span>
@@ -12131,7 +12133,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">n</span>  <span class="c1"># execute next line</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span>  <span class="c1"># execute next line</span>
 </pre></div>
 
 </div>
@@ -12144,9 +12146,22 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="NumPy-(import-numpy-as-np)">NumPy (import numpy as np)<a class="anchor-link" href="#NumPy-(import-numpy-as-np)">&#182;</a></h2>
+<h2 id="NumPy">NumPy<a class="anchor-link" href="#NumPy">&#182;</a></h2>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -12162,7 +12177,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>             <span class="c1"># direct initialization</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>             <span class="c1"># direct initialization</span>
 <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>  <span class="c1"># single precision array with 20 entries</span>
 <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>                   <span class="c1"># initialize 200 zeros</span>
 <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>  <span class="c1"># 3 x 3 integer matrix with ones</span>
@@ -12171,6 +12186,7 @@ div#notebook {
 <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">10.</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>       <span class="c1"># 100 points from 0 to 10</span>
 <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>            <span class="c1"># points from 0 to &lt;100 with step width 2</span>
 <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>         <span class="c1"># 100 log-spaced points between 1e-5 and 1e2</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>     
 <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>                      <span class="c1"># copy array to new memory</span>
 </pre></div>
 
@@ -12193,7 +12209,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">fromfile</span><span class="p">(</span><span class="n">fname</span><span class="o">/</span><span class="nb">object</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># read binary data from file</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">fromfile</span><span class="p">(</span><span class="n">fname</span><span class="o">/</span><span class="nb">object</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># read binary data from file</span>
 <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">fname</span><span class="o">/</span><span class="nb">object</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>   <span class="c1"># read ascii data from file</span>
 </pre></div>
 
@@ -12216,14 +12232,14 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">shape</span>                <span class="c1"># a tuple with the lengths of each axis</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">shape</span>                <span class="c1"># a tuple with the lengths of each axis</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>                 <span class="c1"># length of axis 0</span>
 <span class="n">a</span><span class="o">.</span><span class="n">ndim</span>                 <span class="c1"># number of dimensions (axes)</span>
 <span class="n">a</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>         <span class="c1"># sort array along axis</span>
 <span class="n">a</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>            <span class="c1"># collapse array to one dimension</span>
 <span class="n">a</span><span class="o">.</span><span class="n">conj</span><span class="p">()</span>               <span class="c1"># return complex conjugate</span>
 <span class="n">a</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">)</span>     <span class="c1"># cast to integer</span>
-<span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>   <span class="c1"># return index of maximum along a given axis</span>
+<span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>   <span class="c1"># return index of maximum along a given axis</span>
 <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>           <span class="c1"># return cumulative sum</span>
 <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>              <span class="c1"># True if any element is True</span>
 <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>              <span class="c1"># True if all elements are True</span>
@@ -12249,15 +12265,16 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>          <span class="c1"># initialization with 0 - 99</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>          <span class="c1"># initialization with 0 - 99</span>
 <span class="n">a</span><span class="p">[:</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>                  <span class="c1"># set the first three indices to zero</span>
 <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span> <span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>                 <span class="c1"># set indices 1-4 to 1</span>
+<span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span>
 <span class="n">a</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">stop</span><span class="p">:</span><span class="n">step</span><span class="p">]</span>          <span class="c1"># general form of indexing/slicing</span>
-<span class="n">a</span><span class="p">[</span><span class="bp">None</span><span class="p">,</span> <span class="p">:]</span>                  <span class="c1"># transform to column vector</span>
+<span class="n">a</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:]</span>                  <span class="c1"># transform to column vector</span>
 <span class="n">a</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">]]</span>             <span class="c1"># return array with values of the indices</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>       <span class="c1"># transform to 10 x 10 matrix</span>
 <span class="n">a</span><span class="o">.</span><span class="n">T</span>                         <span class="c1"># return transposed view</span>
-<span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>  <span class="c1"># transpose array to new axis order</span>
+<span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>     <span class="c1"># transpose array to new axis order</span>
 <span class="n">a</span><span class="p">[</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">]</span>                    <span class="c1"># returns array that fulfills element-wise condition</span>
 </pre></div>
 
@@ -12280,7 +12297,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">2</span>                          <span class="c1"># returns array with boolean values</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">&lt;</span> <span class="mi">2</span>                          <span class="c1"># returns array with boolean values</span>
 <span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">,</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># element-wise logical and</span>
 <span class="n">np</span><span class="o">.</span><span class="n">logical_or</span><span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">,</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span>   <span class="c1"># element-wise logical or</span>
 <span class="o">~</span><span class="n">a</span>                             <span class="c1"># invert boolean array</span>
@@ -12306,7 +12324,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">a</span> <span class="o">*</span> <span class="mi">5</span>              <span class="c1"># multiplication with scalar</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">*</span> <span class="mi">5</span>              <span class="c1"># multiplication with scalar</span>
 <span class="n">a</span> <span class="o">+</span> <span class="mi">5</span>              <span class="c1"># addition with scalar</span>
 <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>              <span class="c1"># addition with array b</span>
 <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>              <span class="c1"># division with b (np.NaN for division by zero)</span>
@@ -12314,12 +12333,12 @@ div#notebook {
 <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>      <span class="c1"># a to the power b</span>
 <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>          <span class="c1"># sine</span>
 <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>          <span class="c1"># cosine</span>
-<span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>    <span class="c1"># arctan(y/x)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>   <span class="c1"># arctan(y/x)</span>
 <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>       <span class="c1"># arcsin</span>
 <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>      <span class="c1"># degrees to radians</span>
 <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>      <span class="c1"># radians to degrees</span>
 <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>          <span class="c1"># variance of array</span>
-<span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># standard deviation</span>
+<span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># standard deviation</span>
 </pre></div>
 
 </div>
@@ -12341,12 +12360,13 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>                        <span class="c1"># inner matrix product: a_mi b_in</span>
-<span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">&#39;ijkl,klmn-&gt;ijmn&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># einstein summation convention</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]])</span>
+<span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>                        <span class="c1"># inner matrix product: a_mi b_in</span>
+<span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">&#39;ik,kl-&gt;il&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>        <span class="c1"># einstein summation convention</span>
 <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>                   <span class="c1"># sum over axis 1</span>
 <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>                           <span class="c1"># return array with absolute values</span>
-<span class="n">a</span><span class="p">[</span><span class="bp">None</span><span class="p">,</span> <span class="p">:]</span> <span class="o">+</span> <span class="n">b</span><span class="p">[:,</span> <span class="bp">None</span><span class="p">]</span>             <span class="c1"># outer sum</span>
-<span class="n">a</span><span class="p">[</span><span class="bp">None</span><span class="p">,</span> <span class="p">:]</span> <span class="o">*</span> <span class="n">b</span><span class="p">[:,</span> <span class="bp">None</span><span class="p">]</span>             <span class="c1"># outer product</span>
+<span class="n">a</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:]</span> <span class="o">+</span> <span class="n">b</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span>             <span class="c1"># outer sum</span>
+<span class="n">a</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:]</span> <span class="o">*</span> <span class="n">b</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span>             <span class="c1"># outer product</span>
 <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>                      <span class="c1"># outer product</span>
 <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">a</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>                     <span class="c1"># matrix norm</span>
 </pre></div>
@@ -12370,8 +12390,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># integrate along axis 1</span>
-<span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">xp</span><span class="p">,</span> <span class="n">yp</span><span class="p">)</span>      <span class="c1"># interpolate function xp, yp at points x</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dx</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>          <span class="c1"># integrate along axis 0</span>
+<span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">xp</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">fp</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span> <span class="c1"># interpolate function xp, yp at points x</span>
 </pre></div>
 
 </div>
@@ -12393,11 +12413,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>             <span class="c1"># complex fourier transform of y</span>
-<span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftfreqs</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>   <span class="c1"># fft frequencies for a given length</span>
-<span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftshift</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span>    <span class="c1"># shifts zero frequency to the middle</span>
-<span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">rfft</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>            <span class="c1"># real fourier transform of y</span>
-<span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">rfftfreqs</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>  <span class="c1"># real fft frequencies for a given length</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>                   <span class="c1"># complex fourier transform of y</span>
+<span class="n">freqs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftfreq</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>  <span class="c1"># fft frequencies for a given length</span>
+<span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftshift</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span>          <span class="c1"># shifts zero frequency to the middle</span>
+<span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">rfft</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>                  <span class="c1"># real fourier transform of y</span>
+<span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">rfftfreq</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>         <span class="c1"># real fft frequencies for a given length</span>
 </pre></div>
 
 </div>
@@ -12419,7 +12439,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>   <span class="c1"># rounds to nearest upper int</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="mf">3.56</span>
+<span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>   <span class="c1"># rounds to nearest upper int</span>
 <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># rounds to nearest lower int</span>
 <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># rounds to neares int</span>
 </pre></div>
@@ -12443,11 +12464,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># 100 normal distributed random numbers</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># 100 normal distributed random numbers</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">23032</span><span class="p">)</span>                       <span class="c1"># resets the seed value</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>                         <span class="c1"># 200 random numbers in [0, 1)</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>               <span class="c1"># 200 random numbers in [1, 30)</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random_integers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>       <span class="c1"># 300 random integers between [1, 15]</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>       <span class="c1"># 300 random integers between [1, 15]</span>
 </pre></div>
 
 </div>
@@ -12460,9 +12481,22 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Matplotlib-(import-matplotlib.pyplot-as-plt)">Matplotlib (import matplotlib.pyplot as plt)<a class="anchor-link" href="#Matplotlib-(import-matplotlib.pyplot-as-plt)">&#182;</a></h2>
+<h2 id="Matplotlib">Matplotlib<a class="anchor-link" href="#Matplotlib">&#182;</a></h2>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -12478,10 +12512,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>  <span class="c1"># initialize figure</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>                        <span class="c1"># add second subplot in a 3 x 2 grid</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>       <span class="c1"># return fig and array of axes in a 5 x 2 grid</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="n">left</span><span class="p">,</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">])</span>     <span class="c1"># manually add axes at a certain position</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>        <span class="c1"># initialize figure</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>                              <span class="c1"># add second subplot in a 3 x 2 grid</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>             <span class="c1"># return fig and array of axes in a 5 x 2 grid</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">(</span><span class="n">left</span><span class="o">=.</span><span class="mi">3</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=.</span><span class="mi">1</span><span class="p">,</span> <span class="n">width</span><span class="o">=.</span><span class="mi">6</span><span class="p">,</span> <span class="n">height</span><span class="o">=.</span><span class="mi">8</span><span class="p">)</span> <span class="c1"># manually add axes at a certain position</span>
 </pre></div>
 
 </div>
@@ -12503,7 +12537,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">)</span>            <span class="c1"># big figure title</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">)</span>            <span class="c1"># big figure title</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">bottom</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
                     <span class="n">right</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
                     <span class="n">top</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span>
@@ -12512,7 +12546,7 @@ div#notebook {
 <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
                  <span class="n">h_pad</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
                  <span class="n">w_pad</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
-                 <span class="n">rect</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>      <span class="c1"># adjust subplots to fit perfectly into fig</span>
+                 <span class="n">rect</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>      <span class="c1"># adjust subplots to fit perfectly into fig</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">()</span>                  <span class="c1"># set xlabel</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">()</span>                  <span class="c1"># set ylabel</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>                <span class="c1"># sets x limits</span>
@@ -12520,7 +12554,7 @@ div#notebook {
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;blabla&#39;</span><span class="p">)</span>           <span class="c1"># sets the axis title</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;bla&#39;</span><span class="p">)</span>             <span class="c1"># set multiple parameters at once</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper center&#39;</span><span class="p">)</span>    <span class="c1"># activate legend</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>      <span class="c1"># activate grid</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>      <span class="c1"># activate grid</span>
 <span class="n">bbox</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_position</span><span class="p">()</span>         <span class="c1"># returns the axes bounding box</span>
 <span class="n">bbox</span><span class="o">.</span><span class="n">x0</span> <span class="o">+</span> <span class="n">bbox</span><span class="o">.</span><span class="n">width</span>             <span class="c1"># bounding box parameters</span>
 </pre></div>
@@ -12544,7 +12578,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;bla&#39;</span><span class="p">)</span>  <span class="c1"># plots a line</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;bla&#39;</span><span class="p">)</span>  <span class="c1"># plots a line</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>                  <span class="c1"># scatter plot</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span><span class="n">yy</span><span class="p">,</span><span class="n">zz</span><span class="p">,</span> <span class="n">shading</span><span class="o">=</span><span class="s1">&#39;gouraud&#39;</span><span class="p">)</span>      <span class="c1"># fast colormesh function</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">colormesh</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span><span class="n">yy</span><span class="p">,</span><span class="n">zz</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">)</span>               <span class="c1"># slower colormesh function</span>

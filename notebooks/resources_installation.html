@@ -11784,7 +11784,17 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="1.-Install-Nipype">1. Install Nipype<a class="anchor-link" href="#1.-Install-Nipype">&#182;</a></h1><p>Getting Nipype to run on your system is rather straight forward. And there are multiple ways to do the installation:</p>
+<h1 id="Install-Nipype">Install Nipype<a class="anchor-link" href="#Install-Nipype">&#182;</a></h1><p>The best and most complete instruction on how to download and install Nipype can be found on the <a href="http://nipype.readthedocs.io/en/latest/users/install.html">official homepage</a>. Nonetheless, here's a short summary of some (but not all) approaches.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.-Install-Nipype">1. Install Nipype<a class="anchor-link" href="#1.-Install-Nipype">&#182;</a></h2><p>Getting Nipype to run on your system is rather straight forward. And there are multiple ways to do the installation:</p>
 <h3 id="Using-conda">Using conda<a class="anchor-link" href="#Using-conda">&#182;</a></h3><p>If you have <a href="http://conda.pydata.org/docs/index.html">conda</a>, <a href="https://conda.io/miniconda.html">miniconda</a> or <a href="https://www.continuum.io/why-anaconda">anaconda</a> on your system, than installing Nipype is just the following command:</p>
 
 <pre><code>conda config --add channels conda-forge
@@ -11805,13 +11815,13 @@ conda install nipype
 </code></pre>
 <h3 id="Using-Debian-or-Ubuntu">Using Debian or Ubuntu<a class="anchor-link" href="#Using-Debian-or-Ubuntu">&#182;</a></h3><p>Installing Nipype on a Debian or Ubuntu system can also be done via <code>apt-get</code>. For this use the following command:</p>
 
-<pre><code>apt-gete install python-nipype
+<pre><code>apt-get install python-nipype
 
 
 </code></pre>
 <h3 id="Using-Github">Using Github<a class="anchor-link" href="#Using-Github">&#182;</a></h3><p>To make sure that you really have the newest version of Nipype on your system, you can run the pip command with a flag that points to the github repo:</p>
 
-<pre><code>pip install -e git+https://github.com/nipy/nipype#egg=nipype</code></pre>
+<pre><code>pip install git+https://github.com/nipy/nipype#egg=nipype</code></pre>
 
 </div>
 </div>
@@ -11821,7 +11831,7 @@ conda install nipype
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="2.-Install-Dependencies">2. Install Dependencies<a class="anchor-link" href="#2.-Install-Dependencies">&#182;</a></h1><p>For more information about the installation in general and to get a list of recommended software, go to the main page, under: <a href="http://nipype.readthedocs.io/en/latest/users/install.html">http://nipype.readthedocs.io/en/latest/users/install.html</a></p>
+<h2 id="2.-Install-Dependencies">2. Install Dependencies<a class="anchor-link" href="#2.-Install-Dependencies">&#182;</a></h2><p>For more information about the installation in general and to get a list of recommended software, go to the main page, under: <a href="http://nipype.readthedocs.io/en/latest/users/install.html">http://nipype.readthedocs.io/en/latest/users/install.html</a></p>
 <p>For a more step by step installation guide for additional software dependencies like SPM, FSL, FreeSurfer and ANTs, go to the <a href="http://miykael.github.io/nipype-beginner-s-guide/installation.html">Beginner's Guide</a>.</p>
 
 </div>
@@ -11832,7 +11842,7 @@ conda install nipype
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="3.-Test-Nipype">3. Test Nipype<a class="anchor-link" href="#3.-Test-Nipype">&#182;</a></h1>
+<h2 id="3.-Test-Nipype">3. Test Nipype<a class="anchor-link" href="#3.-Test-Nipype">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11841,7 +11851,7 @@ conda install nipype
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import the nipype module</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import the nipype module</span>
 <span class="kn">import</span> <span class="nn">nipype</span>
 
 <span class="c1"># Run the test: Increase verbosity parameter for more info</span>

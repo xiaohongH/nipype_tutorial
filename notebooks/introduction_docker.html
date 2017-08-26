@@ -11785,7 +11785,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <center><img src="../static/images/logoDocker.png" width=500></center><h1 id="Docker">Docker<a class="anchor-link" href="#Docker">&#182;</a></h1><p><a href="https://www.docker.com">Docker</a> is an open-source project that automates the deployment of applications inside software containers. Those containers wrap up a piece of software in a complete filesystem that contains everything it needs to run: code, system tools, software libraries, such as Python, FSL, AFNI, SPM, FreeSurfer, ANTs, etc. This guarantees that it will always run the same, regardless of the environment it is running in.</p>
-<p><font color='red'>Important:</font> <strong>You don't need Docker to run Nipype on your system</strong>. For Mac and Linux users, it probably is much simpler to install Nipype directly on your system. For more information on how to do this see the <a href="resources_installation.html">Installation Section</a> of this tutorial. But for Windows user, or users that don't want to setup all the dependencies themselves, Docker is the way to go.</p>
+<p><font color='red'>Important:</font> <strong>You don't need Docker to run Nipype on your system</strong>. For Mac and Linux users, it probably is much simpler to install Nipype directly on your system. For more information on how to do this see the <a href="http://nipype.readthedocs.io/en/latest/users/install.html">Nipype website</a>. But for Windows user, or users that don't want to setup all the dependencies themselves, Docker is the way to go.</p>
 
 </div>
 </div>
@@ -11795,7 +11795,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Docker-Image-for-the-interactive-Nipype-Tutorial">Docker Image for the interactive Nipype Tutorial<a class="anchor-link" href="#Docker-Image-for-the-interactive-Nipype-Tutorial">&#182;</a></h1><p>If you want to run this Nipype Tutorial with the example dataset locally on your own system, you need to use the docker image, provided under <a href="https://github.com/miykael/nipype_course">miykael/nipype_course</a>. This docker image sets up a Linux environment on your system, with functioning Python, Nipype, FSL, AFNI, ANTs and SPM12 software package, some example data and all the tutorial notebooks to learn Nipype.</p>
+<h1 id="Docker-Image-for-the-interactive-Nipype-Tutorial">Docker Image for the interactive Nipype Tutorial<a class="anchor-link" href="#Docker-Image-for-the-interactive-Nipype-Tutorial">&#182;</a></h1><p>If you want to run this Nipype Tutorial with the example dataset locally on your own system, you need to use the docker image, provided under <a href="https://hub.docker.com/r/satra/nih-workshop-2017/">satra/nih-workshop-2017</a>. This docker image sets up a Linux environment on your system, with functioning Python, Nipype, FSL, AFNI, ANTs and SPM12 software package, some example data and all the tutorial notebooks to learn Nipype. Alternatively, you can also create your own docker image with <a href="https://github.com/kaczmarj/neurodocker">Neurodocker</a>.</p>
 
 </div>
 </div>
@@ -11807,7 +11807,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Install-Docker">Install Docker<a class="anchor-link" href="#Install-Docker">&#182;</a></h1><p>Before you can do anything, you first need to install <a href="https://www.docker.com">Docker</a> on your system. The installation process differes per system. Luckily, the docker homepage has nice instructions for...</p>
 <ul>
-<li><a href="https://docs.docker.com/engine/installation/linux/ubuntu/">Ubuntu</a> or <a href="https://docs.docker.com/engine/installation/linux/debian/">Debian</a></li>
+<li><a href="https://docs.docker.com/engine/installation/linux/ubuntu/">Ubuntu</a> or <a href="https://docs.docker.com/engine/installation/linux/docker-ce/debian/">Debian</a></li>
 <li><a href="https://docs.docker.com/toolbox/toolbox_install_windows/">Windows 7/8/9/10</a> or <a href="https://docs.docker.com/docker-for-windows/install/">Windows 10Pro</a></li>
 <li><a href="https://docs.docker.com/docker-for-mac/install/">OS X (from El Capitan 10.11 on)</a> or <a href="https://docs.docker.com/toolbox/toolbox_install_mac/">OS X (before El Capitan 10.11)</a>.</li>
 </ul>
@@ -11816,7 +11816,7 @@ div#notebook {
 <pre><code>docker run hello-world
 
 </code></pre>
-<p><strong>Note:</strong> Mac and Linux users might need to use <code>sudo</code> to run <code>docker</code> commands.</p>
+<p><strong>Note:</strong> Linux users might need to use <code>sudo</code> to run <code>docker</code> commands or follow <a href="https://docs.docker.com/engine/installation/linux/linux-postinstall/">post-installation steps</a>.</p>
 
 </div>
 </div>
@@ -11826,9 +11826,26 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="How-to-run-miykael/nipype_course">How to run <code>miykael/nipype_course</code><a class="anchor-link" href="#How-to-run-miykael/nipype_course">&#182;</a></h1><p>After installing docker on your system and making sure that the <code>hello-world</code> example was running, we are good to go to start the Nipype Course image. The exact implementation is a bit different for Windows user, but the general command looks as follows:</p>
+<h1 id="Pulling-the-Docker-image">Pulling the Docker image<a class="anchor-link" href="#Pulling-the-Docker-image">&#182;</a></h1><p>You can download various Docker images, but for this tutorial you will need  <code>satra/nih-workshop-2017</code>:</p>
 
-<pre><code>docker run -ti --rm -p 8888:8888 -v /home/username/results:/output miykael/nipype_course
+<pre><code>docker pull satra/nih-workshop-2017:latest
+
+</code></pre>
+<p>Once it's done you can check available images on your system:</p>
+
+<pre><code>docker images</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="How-to-run-satra/nih-workshop-2017">How to run <code>satra/nih-workshop-2017</code><a class="anchor-link" href="#How-to-run-satra/nih-workshop-2017">&#182;</a></h1><p>After installing docker on your system and making sure that the <code>hello-world</code> example was running, we are good to go to start the Nipype Tutorial image. The exact implementation is a bit different for Windows user, but the general command looks as follows:</p>
+
+<pre><code>docker run -it --rm -v /path/to/nipype_tutorial/:/opt/tutorial -v /path/to/data/:/data -v /path/to/output/:/output -p 8888:8888 satra/nih-workshop-2017:latest jupyter notebook
 
 </code></pre>
 <p>But what do those flags mean?</p>
@@ -11836,34 +11853,29 @@ div#notebook {
 <li>The <code>-ti</code> flag tells docker that it should open an interactive container instance.</li>
 <li>The <code>--rm</code> flag tells docker that the container should automatically be removed after we close docker.</li>
 <li>The <code>-p</code> flag specifies which port we want to make available for docker.</li>
-<li>The <code>-v</code> flag tells docker which folder (here: <code>/home/username/results</code> it should mount to make it accesible inside the container. The second part of the <code>-v</code> flag (here: <code>/output</code>) specifies under which path the mounted folder can be found inside the container. This means that we can use the folder <code>/output</code> inside the tutorial to save data outside the docker container under <code>/home/username/results</code>. <strong>Important</strong>: To use the <code>results</code> folder, you first need to create it on your system!</li>
-<li>The last argument <code>miykael/nipype_course</code> tells docker that we want to run this docker image.</li>
+<li>The <code>-v</code> flag tells docker which folders should be mount to make them accesible inside the container. Here: <code>/path/to/nipype_tutorial</code> is your local directory where you downloaded <a href="https://github.com/satra/nih-workshop-2017">Nipype Tutorial repository</a>. <code>/path/to/data/</code> is a directory where you have dataset <code>ds000114</code>, and <code>/path/to/output</code> can be an empty directory that will be used for output. The second part of the <code>-v</code> flag (here: <code>/opt/tutorial</code>, <code>/data</code> or <code>/output</code>) specifies under which path the mounted folders can be found inside the container. <strong>Important</strong>: To use the <code>tutorial</code>, <code>data</code> and <code>output</code> folder, you first need to create them on your system!</li>
+<li><code>satra/nih-workshop-2017:latest</code> tells docker which image you want to run.</li>
+<li><code>jupyter notebook</code> tells that you want to run directly the jupyter notebook command within the container. Alternatively, you can also use <code>jupyter-lab</code>, <code>bash</code> or <code>ipython</code>.</li>
 </ul>
-<p>To run a docker image, docker will look for the specified image on <a href="https://hub.docker.com/r/miykael/nipype_course/">Docker Hub</a>. If the docker image was already download to your system, it will be directly opened. Otherwise, it first needs to download all containers, which might take some time.</p>
-<h2 id="Run-a-docker-image-on-Linux-or-Mac">Run a docker image on Linux or Mac<a class="anchor-link" href="#Run-a-docker-image-on-Linux-or-Mac">&#182;</a></h2><p>Running a docker image on a Linux or Mac OS is very simple. Make sure that you've created a results folder on your system (e.g. <code>mkdir -p /home/username/results</code>). Then just open a new terminal and use the command from above:</p>
-
-<pre><code>docker run -ti --rm -p 8888:8888 -v /home/username/results:/output miykael/nipype_course
-
-</code></pre>
-<p>Once the docker image is downloaded, open the shown URL link in your browser and you are good to go. The URL will look something like:</p>
+<p><strong>Note</strong> that when you run this docker image without any more specification, than it will prompt you a URL link in your terminal that you will need to copy paste into your browser to get to the notebooks.</p>
+<h2 id="Run-a-docker-image-on-Linux-or-Mac">Run a docker image on Linux or Mac<a class="anchor-link" href="#Run-a-docker-image-on-Linux-or-Mac">&#182;</a></h2><p>Running a docker image on a Linux or Mac OS is very simple. Make sure that the folders <code>tutorial</code>, <code>data</code> and <code>output</code> exist. Then just open a new terminal and use the command from above. Once the docker image is downloaded, open the shown URL link in your browser and you are good to go. The URL will look something like:</p>
 
 <pre><code>http://localhost:8888/?token=0312c1ef3b61d7a44ff5346d3d150c23249a548850e13868
 
 
 </code></pre>
-<h2 id="Run-a-docker-image-on-Windows">Run a docker image on Windows<a class="anchor-link" href="#Run-a-docker-image-on-Windows">&#182;</a></h2><p>Running a docker image on Windows is a bit trickier than on Ubuntu. Assuming you've installed the DockerToolbox, open the Docker Quickstart Terminal (encircled in red).</p>
-<center><img src="../static/images/docker_terminal.png" width=600></center><p>Once the docker terminal is ready (when you see the whale), we can execute the following steps (see also figure):</p>
+<h2 id="Run-a-docker-image-on-Windows">Run a docker image on Windows<a class="anchor-link" href="#Run-a-docker-image-on-Windows">&#182;</a></h2><p>Running a docker image on Windows is a bit trickier than on Ubuntu. Assuming you've installed the DockerToolbox, open the Docker Quickstart Terminal. Once the docker terminal is ready (when you see the whale), execute the following steps (see also figure):</p>
 <ol>
 <li><p>We need to check the IP adress of your docker machine. For this, use the command:</p>
 <p><code>docker-machine ip</code></p>
 <p>In my case, this returned <code>192.168.99.100</code></p>
 </li>
 <li><p>If you haven't already created a new folder to store your container output into, do so. You can create the folder either in the explorer as usual or do it with the command <code>mkdir -p</code> in the docker console. For example like this:</p>
-<p><code>mkdir -p /c/Users/username/results</code></p>
+<p><code>mkdir -p /c/Users/username/output</code></p>
 <p>Please replace <code>username</code> with the name of the current user on your system. <strong>Pay attention</strong> that the folder paths in the docker terminal are not backslash (<code>\</code>) as we usually have in Windows. Also, <code>C:\</code> needs to be specified as <code>/c/</code>.</p>
 </li>
 <li><p>Now, we can open run the container with the command from above:</p>
-<p><code>docker run -ti --rm -p 8888:8888 -v /c/Users/username/outputs:/output miykael/nipype_course</code></p>
+<p><code>docker run -it --rm -v /c/Users/username/path/to/nipype_tutorial/:/opt/tutorial -v /c/Users/username/path/to/data/:/data -v /c/Users/username/path/to/output/:/output -p 8888:8888 satra/nih-workshop-2017:latest</code></p>
 </li>
 <li><p>Once the docker image is downloaded, it will show you an URL that looks something like this:</p>
 <p><code>http://localhost:8888/?token=0312c1ef3b61d7a44ff5346d3d150c23249a548850e13868</code></p>
@@ -11881,9 +11893,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Docker-tips-and-tricks">Docker tips and tricks<a class="anchor-link" href="#Docker-tips-and-tricks">&#182;</a></h1><h2 id="Access-Docker-Container-with-bash-or-ipython">Access Docker Container with <code>bash</code> or <code>ipython</code><a class="anchor-link" href="#Access-Docker-Container-with-bash-or-ipython">&#182;</a></h2><p>You don't have to open a jupyter notebook when you run <code>miykael/nipype_course</code>. You can also access the docker container directly with <code>bash</code> or <code>ipython</code> by adding it to the end of your command, i.e.:</p>
+<h1 id="Docker-tips-and-tricks">Docker tips and tricks<a class="anchor-link" href="#Docker-tips-and-tricks">&#182;</a></h1><h2 id="Access-Docker-Container-with-bash-or-ipython">Access Docker Container with <code>bash</code> or <code>ipython</code><a class="anchor-link" href="#Access-Docker-Container-with-bash-or-ipython">&#182;</a></h2><p>You don't have to open a jupyter notebook when you run <code>satra/nih-workshop-2017</code>. You can also access the docker container directly with <code>bash</code> or <code>ipython</code> by adding it to the end of your command, i.e.:</p>
 
-<pre><code>docker run -ti --rm -v /home/username/results:/output miykael/nipype_course bash
+<pre><code>docker run -it --rm -v /path/to/nipype_tutorial/:/opt/tutorial -v /path/to/data/:/data -v /path/to/output/:/output -p 8888:8888 satra/nih-workshop-2017:latest bash
 
 </code></pre>
 <p>This also works with other software commands, such as <code>bet</code> etc.</p>
@@ -11902,16 +11914,16 @@ div#notebook {
 </code></pre>
 <h2 id="Export-and-Import-a-docker-image">Export and Import a docker image<a class="anchor-link" href="#Export-and-Import-a-docker-image">&#182;</a></h2><p>If you don't want to depend on a internet connection, you can also export an already downloaded docker image and than later on import it on another PC. To do so, use the following two commands:</p>
 
-<pre><code># Export docker image miykael/nipype_course
-docker save -o nipype_course.tar miykael/nipype_course
+<pre><code># Export docker image satra/nih-workshop-2017
+docker save -o nipype_tutorial.tar satra/nih-workshop-2017
 
 # Import docker image on another PC
-docker load --input nipype_course.tar
+docker load --input nipype_tutorial.tar
 
 </code></pre>
-<p>It might be possible that you run into administrator privileges isssues because you ran your docker command with <code>sudo</code>. This means that òther users don't have access rights to <code>nipype_course.tar</code>. To avoid this, just change the rights of <code>nipype_course.tar</code> with the command:</p>
+<p>It might be possible that you run into administrator privileges isssues because you ran your docker command with <code>sudo</code>. This means that òther users don't have access rights to <code>nipype_tutorial.tar</code>. To avoid this, just change the rights of <code>nipype_tutorial.tar</code> with the command:</p>
 
-<pre><code>sudo chmod 777 nipype_course.tar</code></pre>
+<pre><code>sudo chmod 777 nipype_tutorial.tar</code></pre>
 
 </div>
 </div>

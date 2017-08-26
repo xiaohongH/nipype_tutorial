@@ -11795,8 +11795,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import Node and Function module</span>
-<span class="kn">from</span> <span class="nn">nipype</span> <span class="kn">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Function</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import Node and Function module</span>
+<span class="kn">from</span> <span class="nn">nipype</span> <span class="k">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Function</span>
 
 <span class="c1"># Create a small example function</span>
 <span class="k">def</span> <span class="nf">add_two</span><span class="p">(</span><span class="n">x_input</span><span class="p">):</span>
@@ -11807,9 +11807,42 @@ div#notebook {
                        <span class="n">output_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;val_output&quot;</span><span class="p">],</span>
                        <span class="n">function</span><span class="o">=</span><span class="n">add_two</span><span class="p">),</span>
               <span class="n">name</span><span class="o">=</span><span class="s1">&#39;add_node&#39;</span><span class="p">)</span>
+
+<span class="n">addtwo</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">x_input</span> <span class="o">=</span><span class="mi">4</span>
+<span class="n">addtwo</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">addtwo</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">outputs</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>170822-16:20:10,976 workflow INFO:
+	 Executing node add_node in dir: /tmp/tmpegamphr6/add_node
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>
+val_output = 6</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -11823,7 +11856,10 @@ div#notebook {
 <p>Otherwise you get the following error:</p>
 
 <pre><code>TypeError: add_two() got an unexpected keyword argument 'x_input'
-Interface Function failed to run.</code></pre>
+Interface Function failed to run.
+
+</code></pre>
+<p><strong>Note</strong> that in the current version of <code>Nipype</code> you don't have to provide <code>input_names</code> as an argument of <code>Function</code>.</p>
 
 </div>
 </div>
@@ -11843,13 +11879,13 @@ Interface Function failed to run.</code></pre>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">nipype</span> <span class="kn">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Function</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nipype</span> <span class="k">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Function</span>
 
 <span class="c1"># Create the Function object</span>
 <span class="k">def</span> <span class="nf">get_random_array</span><span class="p">(</span><span class="n">array_shape</span><span class="p">):</span>
 
     <span class="c1"># Import random function</span>
-    <span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">random</span>
+    <span class="kn">from</span> <span class="nn">numpy.random</span> <span class="k">import</span> <span class="n">random</span>
    
     <span class="k">return</span> <span class="n">random</span><span class="p">(</span><span class="n">array_shape</span><span class="p">)</span>
 
@@ -11866,7 +11902,7 @@ Interface Function failed to run.</code></pre>
 <span class="n">rndArray</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 
 <span class="c1"># Print output</span>
-<span class="k">print</span> <span class="n">rndArray</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">outputs</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rndArray</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">outputs</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11881,14 +11917,12 @@ Interface Function failed to run.</code></pre>
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170301-21:55:47,598 workflow INFO:
-	 Executing node rndArray_node in dir: /tmp/tmpv4BGTx/rndArray_node
-170301-21:55:47,633 workflow INFO:
-	 Runtime memory and threads stats unavailable
+<pre>170822-16:20:11,10 workflow INFO:
+	 Executing node rndArray_node in dir: /tmp/tmpd3wbtirp/rndArray_node
 
-random_array = [[ 0.55392783  0.56238157  0.26244335]
- [ 0.25663815  0.20904142  0.5810782 ]
- [ 0.18068192  0.65697574  0.1218128 ]]
+random_array = [[ 0.48883667  0.93698723  0.37964188]
+ [ 0.71123744  0.13548814  0.33461698]
+ [ 0.78529018  0.90386049  0.93975202]]
 
 </pre>
 </div>
@@ -11913,10 +11947,10 @@ random_array = [[ 0.55392783  0.56238157  0.26244335]
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">nipype</span> <span class="kn">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Function</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nipype</span> <span class="k">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Function</span>
 
 <span class="c1"># Import random function</span>
-<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">random</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="k">import</span> <span class="n">random</span>
 
 
 <span class="c1"># Create the Function object</span>
@@ -11937,7 +11971,7 @@ random_array = [[ 0.55392783  0.56238157  0.26244335]
 <span class="n">rndArray</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 
 <span class="c1"># Print output</span>
-<span class="k">print</span> <span class="n">rndArray</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">outputs</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rndArray</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">outputs</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11952,8 +11986,8 @@ random_array = [[ 0.55392783  0.56238157  0.26244335]
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170301-21:55:47,697 workflow INFO:
-	 Executing node rndArray_node in dir: /tmp/tmpFBMKdD/rndArray_node
+<pre>170822-16:20:11,36 workflow INFO:
+	 Executing node rndArray_node in dir: /tmp/tmpvwcpf62b/rndArray_node
 </pre>
 </div>
 </div>
@@ -11965,58 +11999,58 @@ random_array = [[ 0.55392783  0.56238157  0.26244335]
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-3-738ed8b85d1d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">&lt;ipython-input-3-96943c3aa6f2&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">     20</span> 
 <span class="ansi-green-intense-fg ansi-bold">     21</span> <span class="ansi-red-fg"># Run node</span>
 <span class="ansi-green-fg">---&gt; 22</span><span class="ansi-red-fg"> </span>rndArray<span class="ansi-blue-fg">.</span>run<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">     23</span> 
 <span class="ansi-green-intense-fg ansi-bold">     24</span> <span class="ansi-red-fg"># Print output</span>
 
-<span class="ansi-green-fg">/opt/conda/envs/python2/lib/python2.7/site-packages/nipype/pipeline/engine/nodes.pyc</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(self, updatehash)</span>
-<span class="ansi-green-intense-fg ansi-bold">    392</span>                     self.inputs.get_traitsfree())
-<span class="ansi-green-intense-fg ansi-bold">    393</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 394</span><span class="ansi-red-fg">                 </span>self<span class="ansi-blue-fg">.</span>_run_interface<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    395</span>             <span class="ansi-green-fg">except</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    396</span>                 os<span class="ansi-blue-fg">.</span>remove<span class="ansi-blue-fg">(</span>hashfile_unfinished<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">~/src/nipype/nipype/pipeline/engine/nodes.py</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(self, updatehash)</span>
+<span class="ansi-green-intense-fg ansi-bold">    370</span>                     self.inputs.get_traitsfree())
+<span class="ansi-green-intense-fg ansi-bold">    371</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 372</span><span class="ansi-red-fg">                 </span>self<span class="ansi-blue-fg">.</span>_run_interface<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    373</span>             <span class="ansi-green-fg">except</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    374</span>                 os<span class="ansi-blue-fg">.</span>remove<span class="ansi-blue-fg">(</span>hashfile_unfinished<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-green-fg">/opt/conda/envs/python2/lib/python2.7/site-packages/nipype/pipeline/engine/nodes.pyc</span> in <span class="ansi-cyan-fg">_run_interface</span><span class="ansi-blue-fg">(self, execute, updatehash)</span>
-<span class="ansi-green-intense-fg ansi-bold">    502</span>         old_cwd <span class="ansi-blue-fg">=</span> os<span class="ansi-blue-fg">.</span>getcwd<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    503</span>         os<span class="ansi-blue-fg">.</span>chdir<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>output_dir<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 504</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_result <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_run_command<span class="ansi-blue-fg">(</span>execute<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    505</span>         os<span class="ansi-blue-fg">.</span>chdir<span class="ansi-blue-fg">(</span>old_cwd<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    506</span> 
+<span class="ansi-green-fg">~/src/nipype/nipype/pipeline/engine/nodes.py</span> in <span class="ansi-cyan-fg">_run_interface</span><span class="ansi-blue-fg">(self, execute, updatehash)</span>
+<span class="ansi-green-intense-fg ansi-bold">    480</span>         old_cwd <span class="ansi-blue-fg">=</span> os<span class="ansi-blue-fg">.</span>getcwd<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    481</span>         os<span class="ansi-blue-fg">.</span>chdir<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>output_dir<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 482</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_result <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_run_command<span class="ansi-blue-fg">(</span>execute<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    483</span>         os<span class="ansi-blue-fg">.</span>chdir<span class="ansi-blue-fg">(</span>old_cwd<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    484</span> 
 
-<span class="ansi-green-fg">/opt/conda/envs/python2/lib/python2.7/site-packages/nipype/pipeline/engine/nodes.pyc</span> in <span class="ansi-cyan-fg">_run_command</span><span class="ansi-blue-fg">(self, execute, copyfiles)</span>
-<span class="ansi-green-intense-fg ansi-bold">    628</span>                 logger<span class="ansi-blue-fg">.</span>info<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Running: %s&#39;</span> <span class="ansi-blue-fg">%</span> cmd<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    629</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 630</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_interface<span class="ansi-blue-fg">.</span>run<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    631</span>             <span class="ansi-green-fg">except</span> Exception <span class="ansi-green-fg">as</span> msg<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    632</span>                 self<span class="ansi-blue-fg">.</span>_result<span class="ansi-blue-fg">.</span>runtime<span class="ansi-blue-fg">.</span>stderr <span class="ansi-blue-fg">=</span> msg
+<span class="ansi-green-fg">~/src/nipype/nipype/pipeline/engine/nodes.py</span> in <span class="ansi-cyan-fg">_run_command</span><span class="ansi-blue-fg">(self, execute, copyfiles)</span>
+<span class="ansi-green-intense-fg ansi-bold">    611</span>                 logger<span class="ansi-blue-fg">.</span>info<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Running: %s&#39;</span> <span class="ansi-blue-fg">%</span> cmd<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    612</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 613</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_interface<span class="ansi-blue-fg">.</span>run<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    614</span>             <span class="ansi-green-fg">except</span> Exception <span class="ansi-green-fg">as</span> msg<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    615</span>                 self<span class="ansi-blue-fg">.</span>_save_results<span class="ansi-blue-fg">(</span>result<span class="ansi-blue-fg">,</span> cwd<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-green-fg">/opt/conda/envs/python2/lib/python2.7/site-packages/nipype/interfaces/base.pyc</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(self, **inputs)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1041</span>                         version=self.version)
-<span class="ansi-green-intense-fg ansi-bold">   1042</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 1043</span><span class="ansi-red-fg">             </span>runtime <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_run_wrapper<span class="ansi-blue-fg">(</span>runtime<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1044</span>             outputs <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>aggregate_outputs<span class="ansi-blue-fg">(</span>runtime<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1045</span>             runtime<span class="ansi-blue-fg">.</span>endTime <span class="ansi-blue-fg">=</span> dt<span class="ansi-blue-fg">.</span>isoformat<span class="ansi-blue-fg">(</span>dt<span class="ansi-blue-fg">.</span>utcnow<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">~/src/nipype/nipype/interfaces/base.py</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(self, **inputs)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1082</span>                         version=self.version)
+<span class="ansi-green-intense-fg ansi-bold">   1083</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 1084</span><span class="ansi-red-fg">             </span>runtime <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_run_wrapper<span class="ansi-blue-fg">(</span>runtime<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1085</span>             outputs <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>aggregate_outputs<span class="ansi-blue-fg">(</span>runtime<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1086</span>             runtime<span class="ansi-blue-fg">.</span>endTime <span class="ansi-blue-fg">=</span> dt<span class="ansi-blue-fg">.</span>isoformat<span class="ansi-blue-fg">(</span>dt<span class="ansi-blue-fg">.</span>utcnow<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-green-fg">/opt/conda/envs/python2/lib/python2.7/site-packages/nipype/interfaces/base.pyc</span> in <span class="ansi-cyan-fg">_run_wrapper</span><span class="ansi-blue-fg">(self, runtime)</span>
-<span class="ansi-green-intense-fg ansi-bold">    998</span>             runtime<span class="ansi-blue-fg">.</span>environ<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;DISPLAY&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;:%d&#39;</span> <span class="ansi-blue-fg">%</span> vdisp_num
-<span class="ansi-green-intense-fg ansi-bold">    999</span> 
-<span class="ansi-green-fg">-&gt; 1000</span><span class="ansi-red-fg">         </span>runtime <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_run_interface<span class="ansi-blue-fg">(</span>runtime<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1001</span> 
-<span class="ansi-green-intense-fg ansi-bold">   1002</span>         <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_redirect_x<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">~/src/nipype/nipype/interfaces/base.py</span> in <span class="ansi-cyan-fg">_run_wrapper</span><span class="ansi-blue-fg">(self, runtime)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1030</span>             runtime<span class="ansi-blue-fg">.</span>environ<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;DISPLAY&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;:%d&#39;</span> <span class="ansi-blue-fg">%</span> vdisp_num
+<span class="ansi-green-intense-fg ansi-bold">   1031</span> 
+<span class="ansi-green-fg">-&gt; 1032</span><span class="ansi-red-fg">         </span>runtime <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_run_interface<span class="ansi-blue-fg">(</span>runtime<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1033</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1034</span>         <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_redirect_x<span class="ansi-blue-fg">:</span>
 
-<span class="ansi-green-fg">/opt/conda/envs/python2/lib/python2.7/site-packages/nipype/interfaces/utility.pyc</span> in <span class="ansi-cyan-fg">_run_interface</span><span class="ansi-blue-fg">(self, runtime)</span>
-<span class="ansi-green-intense-fg ansi-bold">    497</span>             setattr<span class="ansi-blue-fg">(</span>runtime<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;runtime_threads&#39;</span><span class="ansi-blue-fg">,</span> num_threads<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    498</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 499</span><span class="ansi-red-fg">             </span>out <span class="ansi-blue-fg">=</span> function_handle<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">**</span>args<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    500</span> 
-<span class="ansi-green-intense-fg ansi-bold">    501</span>         <span class="ansi-green-fg">if</span> len<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_output_names<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">~/src/nipype/nipype/interfaces/utility/wrappers.py</span> in <span class="ansi-cyan-fg">_run_interface</span><span class="ansi-blue-fg">(self, runtime)</span>
+<span class="ansi-green-intense-fg ansi-bold">    190</span>             setattr<span class="ansi-blue-fg">(</span>runtime<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;runtime_threads&#39;</span><span class="ansi-blue-fg">,</span> num_threads<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    191</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 192</span><span class="ansi-red-fg">             </span>out <span class="ansi-blue-fg">=</span> function_handle<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">**</span>args<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    193</span> 
+<span class="ansi-green-intense-fg ansi-bold">    194</span>         <span class="ansi-green-fg">if</span> len<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_output_names<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span>
 
 <span class="ansi-green-fg">&lt;string&gt;</span> in <span class="ansi-cyan-fg">get_random_array</span><span class="ansi-blue-fg">(array_shape)</span>
 
-<span class="ansi-red-fg">NameError</span>: global name &#39;random&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name &#39;random&#39; is not defined
 Interface Function failed to run. </pre>
 </div>
 </div>
