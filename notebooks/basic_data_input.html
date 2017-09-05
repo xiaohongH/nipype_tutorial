@@ -11654,8 +11654,10 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11666,9 +11668,11 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -12071,8 +12075,8 @@ func = /data/ds102/[subject_id]/ses-[ses_name]/func/sub-[subject_id]_ses-[ses_na
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170731-16:49:15,196 workflow INFO:
-	 Executing node datagrabber in dir: /tmp/tmpzjje_eve/datagrabber
+<pre>170904-06:02:02,387 workflow INFO:
+	 Executing node datagrabber in dir: /tmp/tmpiwew6ysu/datagrabber
 </pre>
 </div>
 </div>
@@ -12177,8 +12181,8 @@ func = /data/ds000114/sub-{subject_id}/ses-{ses_name}/func/ \
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170731-16:49:26,226 workflow INFO:
-	 Executing node selectfiles in dir: /tmp/tmph1rm2buv/selectfiles
+<pre>170904-06:02:02,435 workflow INFO:
+	 Executing node selectfiles in dir: /tmp/tmpd3odxyze/selectfiles
 </pre>
 </div>
 </div>
@@ -12254,8 +12258,8 @@ func = /data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-fingerfootlips_b
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170731-16:49:27,447 workflow INFO:
-	 Executing node selectfiles in dir: /tmp/tmperd7urq6/selectfiles
+<pre>170904-06:02:02,458 workflow INFO:
+	 Executing node selectfiles in dir: /tmp/tmp53bxb6rj/selectfiles
 </pre>
 </div>
 </div>
@@ -12294,7 +12298,39 @@ anat = [&#39;/data/ds000114/sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz&#39;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="FreeSurferSource">FreeSurferSource<a class="anchor-link" href="#FreeSurferSource">&#182;</a></h2><p><code>FreeSurferSource</code> is a specific case of a file grabber that felicitates the data import of outputs from the FreeSurfer recon-all algorithm. This of course requires that you've already run <code>recon-all</code> on your subject.</p>
-<p>Before you can run <code>FreeSurferSource</code>, you first have to specify the path to the FreeSurfer output folder, i.e. you have to specify the SUBJECTS_DIR variable. This can be done as follows:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For the tutorial dataset <code>ds000114</code>, <code>recon-all</code> was already run. So, let's make sure that you have the anatomy output of one subject on your system:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>datalad get -r -J4 /data/ds000114/derivatives/freesurfer/sub-01/
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, before you can run <code>FreeSurferSource</code>, you first have to specify the path to the FreeSurfer output folder, i.e. you have to specify the SUBJECTS_DIR variable. This can be done as follows:</p>
 
 </div>
 </div>
@@ -12308,7 +12344,7 @@ anat = [&#39;/data/ds000114/sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz&#39;
 <span class="kn">from</span> <span class="nn">os.path</span> <span class="k">import</span> <span class="n">abspath</span> <span class="k">as</span> <span class="n">opap</span>
 
 <span class="c1"># Path to your freesurfer output folder</span>
-<span class="n">fs_dir</span> <span class="o">=</span> <span class="n">opap</span><span class="p">(</span><span class="s1">&#39;/data/ds000114/derivatives/freesurfer&#39;</span><span class="p">)</span>
+<span class="n">fs_dir</span> <span class="o">=</span> <span class="n">opap</span><span class="p">(</span><span class="s1">&#39;/data/ds000114/derivatives/freesurfer/&#39;</span><span class="p">)</span>
 
 <span class="c1"># Set SUBJECTS_DIR</span>
 <span class="n">FSCommand</span><span class="o">.</span><span class="n">set_default_subjects_dir</span><span class="p">(</span><span class="n">fs_dir</span><span class="p">)</span>
@@ -12378,8 +12414,8 @@ anat = [&#39;/data/ds000114/sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz&#39;
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170731-16:49:48,883 workflow INFO:
-	 Executing node fssource in dir: /tmp/tmpg2wzxfkr/fssource
+<pre>170904-06:04:52,28 workflow INFO:
+	 Executing node fssource in dir: /tmp/tmpisu77m7r/fssource
 </pre>
 </div>
 </div>
@@ -12424,7 +12460,7 @@ anat = [&#39;/data/ds000114/sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz&#39;
 
 brainmask: /data/ds000114/derivatives/freesurfer/sub-01/mri/brainmask.mgz
 
-inflated: [&#39;/data/ds000114/derivatives/freesurfer/sub-01/surf/lh.inflated&#39;, &#39;/data/ds000114/derivatives/freesurfer/sub-01/surf/rh.inflated&#39;]
+inflated: [&#39;/data/ds000114/derivatives/freesurfer/sub-01/surf/rh.inflated&#39;, &#39;/data/ds000114/derivatives/freesurfer/sub-01/surf/lh.inflated&#39;]
 
 </pre>
 </div>
@@ -12465,8 +12501,8 @@ inflated: [&#39;/data/ds000114/derivatives/freesurfer/sub-01/surf/lh.inflated&#3
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170731-16:49:59,487 workflow INFO:
-	 Executing node fssource in dir: /tmp/tmpg2wzxfkr/fssource
+<pre>170904-06:04:54,346 workflow INFO:
+	 Executing node fssource in dir: /tmp/tmpisu77m7r/fssource
 </pre>
 </div>
 </div>

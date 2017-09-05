@@ -11654,8 +11654,10 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11666,9 +11668,11 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11983,21 +11987,21 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>onset	duration	weight	trial_type
-10	15.0	1	Finger
-40	15.0	1	Foot
-70	15.0	1	Lips
-100	15.0	1	Finger
-130	15.0	1	Foot
-160	15.0	1	Lips
-190	15.0	1	Finger
-220	15.0	1	Foot
-250	15.0	1	Lips
-280	15.0	1	Finger
-310	15.0	1	Foot
-340	15.0	1	Lips
-370	15.0	1	Finger
-400	15.0	1	Foot
-430	15.0	1	Lips
+10	15.0		1	Finger
+40	15.0		1	Foot
+70	15.0		1	Lips
+100	15.0		1	Finger
+130	15.0		1	Foot
+160	15.0		1	Lips
+190	15.0		1	Finger
+220	15.0		1	Foot
+250	15.0		1	Lips
+280	15.0		1	Finger
+310	15.0		1	Foot
+340	15.0		1	Lips
+370	15.0		1	Finger
+400	15.0		1	Foot
+430	15.0		1	Lips
 </pre>
 </div>
 </div>
@@ -12441,7 +12445,7 @@ div#notebook {
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170826-09:14:02,813 workflow INFO:
+<pre>170903-22:18:57,824 workflow INFO:
 	 Generated workflow graph: /output/workingdir/l1analysis/graph.dot.png (graph2use=colored, simple_form=True).
 </pre>
 </div>
@@ -13634,48 +13638,48 @@ YII=
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>/output/datasink/1stLevel
-|-- sub-01
-|   |-- fwhm-4
-|   |   |-- SPM.mat
-|   |   |-- con_0001.nii
-|   |   |-- con_0002.nii
-|   |   |-- con_0003.nii
-|   |   |-- con_0004.nii
-|   |   |-- con_0005.nii
-|   |   |-- con_0006.nii
-|   |   |-- con_0007.nii
-|   |   |-- ess_0008.nii
-|   |   |-- ess_0009.nii
-|   |   |-- spmF_0008.nii
-|   |   |-- spmF_0009.nii
-|   |   |-- spmT_0001.nii
-|   |   |-- spmT_0002.nii
-|   |   |-- spmT_0003.nii
-|   |   |-- spmT_0004.nii
-|   |   |-- spmT_0005.nii
-|   |   |-- spmT_0006.nii
-|   |   `-- spmT_0007.nii
-|   `-- fwhm-8
-|       |-- SPM.mat
-|       |-- con_0001.nii
-|       |-- con_0002.nii
-|       |-- con_0003.nii
-|       |-- con_0004.nii
-|       |-- con_0005.nii
-|       |-- con_0006.nii
-|       |-- con_0007.nii
-|       |-- ess_0008.nii
-|       |-- ess_0009.nii
-|       |-- spmF_0008.nii
-|       |-- spmF_0009.nii
-|       |-- spmT_0001.nii
-|       |-- spmT_0002.nii
-|       |-- spmT_0003.nii
-|       |-- spmT_0004.nii
-|       |-- spmT_0005.nii
-|       |-- spmT_0006.nii
-|       `-- spmT_0007.nii
-`-- sub-02..sub-10
+├── sub-01
+│   ├── fwhm-4
+│   │   ├── con_0001.nii
+│   │   ├── con_0002.nii
+│   │   ├── con_0003.nii
+│   │   ├── con_0004.nii
+│   │   ├── con_0005.nii
+│   │   ├── con_0006.nii
+│   │   ├── con_0007.nii
+│   │   ├── ess_0008.nii
+│   │   ├── ess_0009.nii
+│   │   ├── spmF_0008.nii
+│   │   ├── spmF_0009.nii
+│   │   ├── SPM.mat
+│   │   ├── spmT_0001.nii
+│   │   ├── spmT_0002.nii
+│   │   ├── spmT_0003.nii
+│   │   ├── spmT_0004.nii
+│   │   ├── spmT_0005.nii
+│   │   ├── spmT_0006.nii
+│   │   └── spmT_0007.nii
+│   └── fwhm-8
+│       ├── con_0001.nii
+│       ├── con_0002.nii
+│       ├── con_0003.nii
+│       ├── con_0004.nii
+│       ├── con_0005.nii
+│       ├── con_0006.nii
+│       ├── con_0007.nii
+│       ├── ess_0008.nii
+│       ├── ess_0009.nii
+│       ├── spmF_0008.nii
+│       ├── spmF_0009.nii
+│       ├── SPM.mat
+│       ├── spmT_0001.nii
+│       ├── spmT_0002.nii
+│       ├── spmT_0003.nii
+│       ├── spmT_0004.nii
+│       ├── spmT_0005.nii
+│       ├── spmT_0006.nii
+│       └── spmT_0007.nii
+└── sub-02...sub-10
 
 30 directories, 380 files
 </pre>
@@ -13725,7 +13729,7 @@ YII=
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;nilearn.plotting.displays.YSlicer at 0x7efe64176ef0&gt;</pre>
+<pre>&lt;nilearn.plotting.displays.YSlicer at 0x7f0ff7227898&gt;</pre>
 </div>
 
 </div>
@@ -18056,7 +18060,7 @@ ovj/ByMGnCm4WFEAAAAASUVORK5CYII=
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;nilearn.plotting.displays.YSlicer at 0x7efe5ddcdf98&gt;</pre>
+<pre>&lt;nilearn.plotting.displays.YSlicer at 0x7f0fffae20b8&gt;</pre>
 </div>
 
 </div>
@@ -24511,7 +24515,7 @@ Yhg8pi8AAAAASUVORK5CYII=
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;nilearn.plotting.displays.YSlicer at 0x7efe5dfac198&gt;</pre>
+<pre>&lt;nilearn.plotting.displays.YSlicer at 0x7f0fffc132b0&gt;</pre>
 </div>
 
 </div>
@@ -30985,7 +30989,7 @@ DAwMDAwMDAy2KIxDaGBgYGBgYGBgYGBgsEXx/wFQ9GBNEn6TsQAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;nilearn.plotting.displays.YSlicer at 0x7efe58d84a58&gt;</pre>
+<pre>&lt;nilearn.plotting.displays.YSlicer at 0x7f0ffdf14dd8&gt;</pre>
 </div>
 
 </div>

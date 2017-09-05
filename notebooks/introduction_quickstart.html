@@ -11654,8 +11654,10 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11666,9 +11668,11 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11827,7 +11831,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -11851,7 +11855,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
@@ -11888,18 +11892,18 @@ div#notebook {
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170829-12:57:38,977 workflow INFO:
+<pre>170903-22:30:01,744 workflow INFO:
 	 Workflow hello settings: [&#39;check&#39;, &#39;execution&#39;, &#39;logging&#39;]
-170829-12:57:39,26 workflow INFO:
+170903-22:30:01,746 workflow INFO:
 	 Running serially.
-170829-12:57:39,29 workflow INFO:
-	 Executing node a_plus_b in dir: /opt/tutorial/notebooks/hello/a_plus_b
+170903-22:30:01,747 workflow INFO:
+	 Executing node a_plus_b in dir: /repos/nipype_tutorial/notebooks/hello/a_plus_b
 </pre>
 </div>
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[2]:</div>
+<div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -11926,7 +11930,7 @@ sum = 4</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">concat</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
@@ -11957,14 +11961,14 @@ sum = 4</pre>
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170829-12:57:40,270 workflow INFO:
+<pre>170903-22:30:01,778 workflow INFO:
 	 Workflow hello settings: [&#39;check&#39;, &#39;execution&#39;, &#39;logging&#39;]
-170829-12:57:40,330 workflow INFO:
+170903-22:30:01,783 workflow INFO:
 	 Running serially.
-170829-12:57:40,332 workflow INFO:
-	 Executing node a_plus_b in dir: /opt/tutorial/notebooks/hello/a_plus_b
-170829-12:57:40,415 workflow INFO:
-	 Executing node concat_a_b in dir: /opt/tutorial/notebooks/hello/concat_a_b
+170903-22:30:01,784 workflow INFO:
+	 Executing node a_plus_b in dir: /repos/nipype_tutorial/notebooks/hello/a_plus_b
+170903-22:30:01,790 workflow INFO:
+	 Executing node concat_a_b in dir: /repos/nipype_tutorial/notebooks/hello/concat_a_b
 [hello.a_plus_b, hello.concat_a_b]
 </pre>
 </div>
@@ -11986,7 +11990,7 @@ sum = 4</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">eg</span><span class="o">.</span><span class="n">nodes</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">outputs</span>
@@ -12001,7 +12005,7 @@ sum = 4</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[4]:</div>
+<div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -12028,7 +12032,7 @@ some_list = [4, 3]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plus_one</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
@@ -12058,50 +12062,50 @@ some_list = [4, 3]</pre>
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170829-12:57:42,994 workflow INFO:
+<pre>170903-22:30:01,819 workflow INFO:
 	 Workflow hello settings: [&#39;check&#39;, &#39;execution&#39;, &#39;logging&#39;]
-170829-12:57:43,42 workflow INFO:
+170903-22:30:01,822 workflow INFO:
 	 Running serially.
-170829-12:57:43,44 workflow INFO:
-	 Executing node a_plus_b in dir: /opt/tutorial/notebooks/hello/a_plus_b
-170829-12:57:43,66 workflow INFO:
+170903-22:30:01,824 workflow INFO:
+	 Executing node a_plus_b in dir: /repos/nipype_tutorial/notebooks/hello/a_plus_b
+170903-22:30:01,825 workflow INFO:
 	 Collecting precomputed outputs
-170829-12:57:43,79 workflow INFO:
-	 Executing node concat_a_b in dir: /opt/tutorial/notebooks/hello/concat_a_b
-170829-12:57:43,150 workflow INFO:
-	 Executing node add_1 in dir: /opt/tutorial/notebooks/hello/add_1
+170903-22:30:01,827 workflow INFO:
+	 Executing node concat_a_b in dir: /repos/nipype_tutorial/notebooks/hello/concat_a_b
+170903-22:30:01,835 workflow INFO:
+	 Executing node add_1 in dir: /repos/nipype_tutorial/notebooks/hello/add_1
 PLUS ONE, a = [4, 3]
-170829-12:57:43,196 workflow ERROR:
-	 [&#39;Node add_1 failed to run on host db3db9bfe867.&#39;]
-170829-12:57:43,200 workflow INFO:
-	 Saving crash info to /opt/tutorial/notebooks/crash-20170829-125743-neuro-add_1-8b4dad6e-0d61-4d9d-8870-45eea5011a06.pklz
-170829-12:57:43,202 workflow INFO:
+170903-22:30:01,840 workflow ERROR:
+	 [&#39;Node add_1 failed to run on host c9e1069a3506.&#39;]
+170903-22:30:01,842 workflow INFO:
+	 Saving crash info to /repos/nipype_tutorial/notebooks/crash-20170903-223001-neuro-add_1-5ddf08e7-c93d-4853-9527-619a6a570a39.pklz
+170903-22:30:01,843 workflow INFO:
 	 Traceback (most recent call last):
-  File &#34;/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/pipeline/plugins/linear.py&#34;, line 43, in run
+  File &#34;/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/pipeline/plugins/linear.py&#34;, line 43, in run
     node.run(updatehash=updatehash)
-  File &#34;/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/pipeline/engine/nodes.py&#34;, line 372, in run
+  File &#34;/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/pipeline/engine/nodes.py&#34;, line 372, in run
     self._run_interface()
-  File &#34;/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/pipeline/engine/nodes.py&#34;, line 482, in _run_interface
+  File &#34;/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/pipeline/engine/nodes.py&#34;, line 482, in _run_interface
     self._result = self._run_command(execute)
-  File &#34;/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/pipeline/engine/nodes.py&#34;, line 613, in _run_command
+  File &#34;/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/pipeline/engine/nodes.py&#34;, line 613, in _run_command
     result = self._interface.run()
-  File &#34;/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/interfaces/base.py&#34;, line 1083, in run
+  File &#34;/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/interfaces/base.py&#34;, line 1084, in run
     runtime = self._run_wrapper(runtime)
-  File &#34;/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/interfaces/base.py&#34;, line 1031, in _run_wrapper
+  File &#34;/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/interfaces/base.py&#34;, line 1032, in _run_wrapper
     runtime = self._run_interface(runtime)
-  File &#34;/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/interfaces/utility/wrappers.py&#34;, line 192, in _run_interface
+  File &#34;/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/interfaces/utility/wrappers.py&#34;, line 192, in _run_interface
     out = function_handle(**args)
   File &#34;&lt;string&gt;&#34;, line 3, in plus_one
 TypeError: can only concatenate list (not &#34;int&#34;) to list
 Interface Function failed to run. 
 
-170829-12:57:43,207 workflow INFO:
+170903-22:30:01,845 workflow INFO:
 	 ***********************************
-170829-12:57:43,209 workflow ERROR:
+170903-22:30:01,846 workflow ERROR:
 	 could not run node: hello.add_1
-170829-12:57:43,211 workflow INFO:
-	 crashfile: /opt/tutorial/notebooks/crash-20170829-125743-neuro-add_1-8b4dad6e-0d61-4d9d-8870-45eea5011a06.pklz
-170829-12:57:43,212 workflow INFO:
+170903-22:30:01,846 workflow INFO:
+	 crashfile: /repos/nipype_tutorial/notebooks/crash-20170903-223001-neuro-add_1-5ddf08e7-c93d-4853-9527-619a6a570a39.pklz
+170903-22:30:01,847 workflow INFO:
 	 ***********************************
 </pre>
 </div>
@@ -12120,19 +12124,19 @@ Interface Function failed to run.
 <span class="ansi-green-fg">---&gt; 12</span><span class="ansi-red-fg"> </span>eg <span class="ansi-blue-fg">=</span> wf<span class="ansi-blue-fg">.</span>run<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">     13</span> print<span class="ansi-blue-fg">(</span>eg<span class="ansi-blue-fg">.</span>nodes<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-green-fg">/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/pipeline/engine/workflows.py</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(self, plugin, plugin_args, updatehash)</span>
+<span class="ansi-green-fg">/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/pipeline/engine/workflows.py</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(self, plugin, plugin_args, updatehash)</span>
 <span class="ansi-green-intense-fg ansi-bold">    588</span>         <span class="ansi-green-fg">if</span> str2bool<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>config<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;execution&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;create_report&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-intense-fg ansi-bold">    589</span>             self<span class="ansi-blue-fg">.</span>_write_report_info<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>base_dir<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>name<span class="ansi-blue-fg">,</span> execgraph<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-fg">--&gt; 590</span><span class="ansi-red-fg">         </span>runner<span class="ansi-blue-fg">.</span>run<span class="ansi-blue-fg">(</span>execgraph<span class="ansi-blue-fg">,</span> updatehash<span class="ansi-blue-fg">=</span>updatehash<span class="ansi-blue-fg">,</span> config<span class="ansi-blue-fg">=</span>self<span class="ansi-blue-fg">.</span>config<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    591</span>         datestr <span class="ansi-blue-fg">=</span> datetime<span class="ansi-blue-fg">.</span>utcnow<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>strftime<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;%Y%m%dT%H%M%S&#39;</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    592</span>         <span class="ansi-green-fg">if</span> str2bool<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>config<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;execution&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;write_provenance&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 
-<span class="ansi-green-fg">/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/pipeline/plugins/linear.py</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(self, graph, config, updatehash)</span>
+<span class="ansi-green-fg">/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/pipeline/plugins/linear.py</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(self, graph, config, updatehash)</span>
 <span class="ansi-green-intense-fg ansi-bold">     59</span>                 <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_status_callback<span class="ansi-blue-fg">:</span>
 <span class="ansi-green-intense-fg ansi-bold">     60</span>                     self<span class="ansi-blue-fg">.</span>_status_callback<span class="ansi-blue-fg">(</span>node<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;exception&#39;</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-fg">---&gt; 61</span><span class="ansi-red-fg">         </span>report_nodes_not_run<span class="ansi-blue-fg">(</span>notrun<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-green-fg">/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/pipeline/plugins/base.py</span> in <span class="ansi-cyan-fg">report_nodes_not_run</span><span class="ansi-blue-fg">(notrun)</span>
+<span class="ansi-green-fg">/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/pipeline/plugins/base.py</span> in <span class="ansi-cyan-fg">report_nodes_not_run</span><span class="ansi-blue-fg">(notrun)</span>
 <span class="ansi-green-intense-fg ansi-bold">     99</span>                 logger<span class="ansi-blue-fg">.</span>debug<span class="ansi-blue-fg">(</span>subnode<span class="ansi-blue-fg">.</span>_id<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    100</span>         logger<span class="ansi-blue-fg">.</span>info<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;***********************************&#34;</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-fg">--&gt; 101</span><span class="ansi-red-fg">         raise RuntimeError((&#39;Workflow did not execute cleanly. &#39;
@@ -12159,7 +12163,7 @@ Interface Function failed to run.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span><span class="nv">LC_ALL</span><span class="o">=</span> nipypecli crash crash*
@@ -12177,46 +12181,23 @@ Interface Function failed to run.
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>
+<pre>Traceback (most recent call last):
+  File &#34;/opt/conda/envs/neuro3/bin/nipypecli&#34;, line 11, in &lt;module&gt;
+    load_entry_point(&#39;nipype==1.0.0.dev0&#39;, &#39;console_scripts&#39;, &#39;nipypecli&#39;)()
+  File &#34;/opt/conda/envs/neuro3/lib/python3.6/site-packages/click/core.py&#34;, line 722, in __call__
+    return self.main(*args, **kwargs)
+  File &#34;/opt/conda/envs/neuro3/lib/python3.6/site-packages/click/core.py&#34;, line 676, in main
+    _verify_python3_env()
+  File &#34;/opt/conda/envs/neuro3/lib/python3.6/site-packages/click/_unicodefun.py&#34;, line 118, in _verify_python3_env
+    &#39;for mitigation steps.&#39; + extra)
+RuntimeError: Click will abort further execution because Python 3 was configured to use ASCII as encoding for the environment.  Consult http://click.pocoo.org/python3/for mitigation steps.
 
-File: /opt/tutorial/notebooks/crash-20170829-125743-neuro-add_1-8b4dad6e-0d61-4d9d-8870-45eea5011a06.pklz
-Node: hello.add_1
-Working directory: /opt/tutorial/notebooks/hello/add_1
+This system supports the C.UTF-8 locale which is recommended.
+You might be able to resolve your issue by exporting the
+following environment variables:
 
-
-Node inputs:
-
-a = [4, 3]
-function_str = def plus_one(a):
-    print(&#34;PLUS ONE, a = {}&#34;.format(a))
-    return a + 1
-
-ignore_exception = False
-
-
-
-Traceback: 
-Traceback (most recent call last):
-  File &#34;/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/pipeline/plugins/linear.py&#34;, line 43, in run
-    node.run(updatehash=updatehash)
-  File &#34;/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/pipeline/engine/nodes.py&#34;, line 372, in run
-    self._run_interface()
-  File &#34;/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/pipeline/engine/nodes.py&#34;, line 482, in _run_interface
-    self._result = self._run_command(execute)
-  File &#34;/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/pipeline/engine/nodes.py&#34;, line 613, in _run_command
-    result = self._interface.run()
-  File &#34;/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/interfaces/base.py&#34;, line 1083, in run
-    runtime = self._run_wrapper(runtime)
-  File &#34;/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/interfaces/base.py&#34;, line 1031, in _run_wrapper
-    runtime = self._run_interface(runtime)
-  File &#34;/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/interfaces/utility/wrappers.py&#34;, line 192, in _run_interface
-    out = function_handle(**args)
-  File &#34;&lt;string&gt;&#34;, line 3, in plus_one
-TypeError: can only concatenate list (not &#34;int&#34;) to list
-Interface Function failed to run. 
-
-
-
+    export LC_ALL=C.UTF-8
+    export LANG=C.UTF-8
 </pre>
 </div>
 </div>
@@ -12238,7 +12219,7 @@ Interface Function failed to run.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nipype</span> <span class="k">import</span> <span class="n">MapNode</span>
@@ -12281,20 +12262,24 @@ Interface Function failed to run.
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170829-12:57:54,95 workflow INFO:
+<pre>170903-22:30:10,606 workflow INFO:
 	 Workflow hello_mapnode settings: [&#39;check&#39;, &#39;execution&#39;, &#39;logging&#39;]
-170829-12:57:54,172 workflow INFO:
+170903-22:30:10,610 workflow INFO:
 	 Running serially.
-170829-12:57:54,176 workflow INFO:
-	 Executing node a_plus_b in dir: /opt/tutorial/notebooks/hello_mapnode/a_plus_b
-170829-12:57:54,190 workflow INFO:
+170903-22:30:10,611 workflow INFO:
+	 Executing node a_plus_b in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/a_plus_b
+170903-22:30:10,618 workflow INFO:
+	 Executing node concat_a_b in dir: /repos/nipype_tutorial/notebooks/hello/concat_a_b
+170903-22:30:10,620 workflow INFO:
 	 Collecting precomputed outputs
-170829-12:57:54,202 workflow INFO:
-	 Executing node concat_a_b in dir: /opt/tutorial/notebooks/hello/concat_a_b
-170829-12:57:54,218 workflow INFO:
-	 Collecting precomputed outputs
-170829-12:57:54,231 workflow INFO:
-	 Executing node add_1 in dir: /opt/tutorial/notebooks/hello_mapnode/add_1
+170903-22:30:10,622 workflow INFO:
+	 Executing node add_1 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/add_1
+170903-22:30:10,625 workflow INFO:
+	 Executing node _add_10 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/add_1/mapflow/_add_10
+PLUS ONE, a = 4
+170903-22:30:10,632 workflow INFO:
+	 Executing node _add_11 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/add_1/mapflow/_add_11
+PLUS ONE, a = 3
 [hello_mapnode.a_plus_b, hello.concat_a_b, hello_mapnode.add_1]
 </pre>
 </div>
@@ -12316,7 +12301,7 @@ Interface Function failed to run.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">eg</span><span class="o">.</span><span class="n">nodes</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">outputs</span><span class="p">)</span>
@@ -12355,7 +12340,7 @@ Interface Function failed to run.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">adder</span><span class="o">.</span><span class="n">iterables</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
@@ -12377,30 +12362,34 @@ Interface Function failed to run.
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170829-12:57:56,972 workflow INFO:
+<pre>170903-22:30:11,71 workflow INFO:
 	 Workflow hello_mapnode settings: [&#39;check&#39;, &#39;execution&#39;, &#39;logging&#39;]
-170829-12:57:57,24 workflow INFO:
+170903-22:30:11,83 workflow INFO:
 	 Running serially.
-170829-12:57:57,31 workflow INFO:
-	 Executing node a_plus_b.aI.a1 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_2/a_plus_b
-170829-12:57:57,101 workflow INFO:
-	 Collecting precomputed outputs
-170829-12:57:57,118 workflow INFO:
-	 Executing node concat_a_b.a1 in dir: /opt/tutorial/notebooks/hello/_a_2/concat_a_b
-170829-12:57:57,135 workflow INFO:
-	 Collecting precomputed outputs
-170829-12:57:57,153 workflow INFO:
-	 Executing node add_1.a1 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_2/add_1
-170829-12:57:57,175 workflow INFO:
-	 Executing node a_plus_b.aI.a0 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_1/a_plus_b
-170829-12:57:57,190 workflow INFO:
-	 Collecting precomputed outputs
-170829-12:57:57,202 workflow INFO:
-	 Executing node concat_a_b.a0 in dir: /opt/tutorial/notebooks/hello/_a_1/concat_a_b
-170829-12:57:57,251 workflow INFO:
-	 Collecting precomputed outputs
-170829-12:57:57,263 workflow INFO:
-	 Executing node add_1.a0 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_1/add_1
+170903-22:30:11,84 workflow INFO:
+	 Executing node a_plus_b.aI.a1 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/a_plus_b
+170903-22:30:11,91 workflow INFO:
+	 Executing node concat_a_b.a1 in dir: /repos/nipype_tutorial/notebooks/hello/_a_2/concat_a_b
+170903-22:30:11,97 workflow INFO:
+	 Executing node add_1.a1 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/add_1
+170903-22:30:11,101 workflow INFO:
+	 Executing node _add_10 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/add_1/mapflow/_add_10
+PLUS ONE, a = 4
+170903-22:30:11,108 workflow INFO:
+	 Executing node _add_11 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/add_1/mapflow/_add_11
+PLUS ONE, a = 3
+170903-22:30:11,116 workflow INFO:
+	 Executing node a_plus_b.aI.a0 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/a_plus_b
+170903-22:30:11,122 workflow INFO:
+	 Executing node concat_a_b.a0 in dir: /repos/nipype_tutorial/notebooks/hello/_a_1/concat_a_b
+170903-22:30:11,129 workflow INFO:
+	 Executing node add_1.a0 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/add_1
+170903-22:30:11,132 workflow INFO:
+	 Executing node _add_10 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/add_1/mapflow/_add_10
+PLUS ONE, a = 3
+170903-22:30:11,140 workflow INFO:
+	 Executing node _add_11 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/add_1/mapflow/_add_11
+PLUS ONE, a = 3
 [hello_mapnode.a_plus_b.aI.a0, hello.concat_a_b.a0, hello_mapnode.add_1.a0, hello_mapnode.a_plus_b.aI.a1, hello.concat_a_b.a1, hello_mapnode.add_1.a1]
 </pre>
 </div>
@@ -12422,7 +12411,7 @@ Interface Function failed to run.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">eg</span><span class="o">.</span><span class="n">nodes</span><span class="p">()[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">outputs</span>
@@ -12437,7 +12426,7 @@ Interface Function failed to run.
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[10]:</div>
+<div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -12453,7 +12442,7 @@ Interface Function failed to run.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">wf</span><span class="o">.</span><span class="n">write_graph</span><span class="p">(</span><span class="n">graph2use</span><span class="o">=</span><span class="s1">&#39;exec&#39;</span><span class="p">)</span>
@@ -12471,19 +12460,19 @@ Interface Function failed to run.
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170829-12:58:00,631 workflow INFO:
-	 Generated workflow graph: /opt/tutorial/notebooks/hello_mapnode/graph.dot.png (graph2use=exec, simple_form=True).
+<pre>170903-22:30:12,24 workflow INFO:
+	 Generated workflow graph: /repos/nipype_tutorial/notebooks/hello_mapnode/graph.dot.png (graph2use=exec, simple_form=True).
 </pre>
 </div>
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;/opt/tutorial/notebooks/hello_mapnode/graph.dot.png&#39;</pre>
+<pre>&#39;/repos/nipype_tutorial/notebooks/hello_mapnode/graph.dot.png&#39;</pre>
 </div>
 
 </div>
@@ -12494,7 +12483,7 @@ Interface Function failed to run.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
@@ -12517,7 +12506,7 @@ Interface Function failed to run.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;hello_mapnode/graph.dot.png&quot;</span><span class="p">)</span>
@@ -12532,7 +12521,7 @@ Interface Function failed to run.
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -12854,7 +12843,7 @@ BAsXhmFcQgDgkLuLYBjm7vP/AalL9mFZhFUyAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;hello_mapnode/graph_detailed.dot.png&quot;</span><span class="p">)</span>
@@ -12869,7 +12858,7 @@ BAsXhmFcQgDgkLuLYBjm7vP/AalL9mFZhFUyAAAAAElFTkSuQmCC
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[14]:</div>
+<div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13330,7 +13319,7 @@ aLfh4nkAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">concater</span><span class="o">.</span><span class="n">iterables</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
@@ -13350,72 +13339,64 @@ aLfh4nkAAAAASUVORK5CYII=
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170829-12:58:19,594 workflow INFO:
+<pre>170903-22:30:13,992 workflow INFO:
 	 Workflow hello_mapnode settings: [&#39;check&#39;, &#39;execution&#39;, &#39;logging&#39;]
-170829-12:58:19,643 workflow INFO:
+170903-22:30:14,4 workflow INFO:
 	 Running serially.
-170829-12:58:19,645 workflow INFO:
-	 Executing node a_plus_b.bI.b1 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_2/a_plus_b
-170829-12:58:19,658 workflow INFO:
+170903-22:30:14,5 workflow INFO:
+	 Executing node a_plus_b.bI.b1 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/a_plus_b
+170903-22:30:14,7 workflow INFO:
 	 Collecting precomputed outputs
-170829-12:58:19,669 workflow INFO:
-	 Executing node concat_a_b.aI.a0.b1 in dir: /opt/tutorial/notebooks/hello/_a_2/_b_3/concat_a_b
-170829-12:58:19,684 workflow INFO:
-	 Collecting precomputed outputs
-170829-12:58:19,700 workflow INFO:
-	 Executing node add_1.a0.b1 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_2/_b_3/add_1
-170829-12:58:19,740 workflow INFO:
-	 Executing node _add_10 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_2/_b_3/add_1/mapflow/_add_10
+170903-22:30:14,9 workflow INFO:
+	 Executing node concat_a_b.aI.a0.b1 in dir: /repos/nipype_tutorial/notebooks/hello/_a_2/_b_3/concat_a_b
+170903-22:30:14,16 workflow INFO:
+	 Executing node add_1.a0.b1 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/_b_3/add_1
+170903-22:30:14,22 workflow INFO:
+	 Executing node _add_10 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/_b_3/add_1/mapflow/_add_10
 PLUS ONE, a = 4
-170829-12:58:19,847 workflow INFO:
-	 Executing node _add_11 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_2/_b_3/add_1/mapflow/_add_11
+170903-22:30:14,31 workflow INFO:
+	 Executing node _add_11 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/_b_3/add_1/mapflow/_add_11
 PLUS ONE, a = 3
-170829-12:58:19,956 workflow INFO:
-	 Executing node concat_a_b.aI.a1.b1 in dir: /opt/tutorial/notebooks/hello/_a_2/_b_4/concat_a_b
-170829-12:58:19,975 workflow INFO:
-	 Collecting precomputed outputs
-170829-12:58:19,990 workflow INFO:
-	 Executing node add_1.a1.b1 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_2/_b_4/add_1
-170829-12:58:20,28 workflow INFO:
-	 Executing node _add_10 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_2/_b_4/add_1/mapflow/_add_10
+170903-22:30:14,41 workflow INFO:
+	 Executing node concat_a_b.aI.a1.b1 in dir: /repos/nipype_tutorial/notebooks/hello/_a_2/_b_4/concat_a_b
+170903-22:30:14,49 workflow INFO:
+	 Executing node add_1.a1.b1 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/_b_4/add_1
+170903-22:30:14,53 workflow INFO:
+	 Executing node _add_10 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/_b_4/add_1/mapflow/_add_10
 PLUS ONE, a = 4
-170829-12:58:20,121 workflow INFO:
-	 Executing node _add_11 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_2/_b_4/add_1/mapflow/_add_11
+170903-22:30:14,60 workflow INFO:
+	 Executing node _add_11 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/_b_4/add_1/mapflow/_add_11
 PLUS ONE, a = 4
-170829-12:58:20,233 workflow INFO:
-	 Executing node a_plus_b.bI.b0 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_1/a_plus_b
-170829-12:58:20,246 workflow INFO:
+170903-22:30:14,68 workflow INFO:
+	 Executing node a_plus_b.bI.b0 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/a_plus_b
+170903-22:30:14,70 workflow INFO:
 	 Collecting precomputed outputs
-170829-12:58:20,255 workflow INFO:
-	 Executing node concat_a_b.aI.a0.b0 in dir: /opt/tutorial/notebooks/hello/_a_1/_b_3/concat_a_b
-170829-12:58:20,272 workflow INFO:
-	 Collecting precomputed outputs
-170829-12:58:20,284 workflow INFO:
-	 Executing node add_1.a0.b0 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_1/_b_3/add_1
-170829-12:58:20,317 workflow INFO:
-	 Executing node _add_10 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_1/_b_3/add_1/mapflow/_add_10
+170903-22:30:14,71 workflow INFO:
+	 Executing node concat_a_b.aI.a0.b0 in dir: /repos/nipype_tutorial/notebooks/hello/_a_1/_b_3/concat_a_b
+170903-22:30:14,78 workflow INFO:
+	 Executing node add_1.a0.b0 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/_b_3/add_1
+170903-22:30:14,81 workflow INFO:
+	 Executing node _add_10 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/_b_3/add_1/mapflow/_add_10
 PLUS ONE, a = 3
-170829-12:58:20,402 workflow INFO:
-	 Executing node _add_11 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_1/_b_3/add_1/mapflow/_add_11
+170903-22:30:14,89 workflow INFO:
+	 Executing node _add_11 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/_b_3/add_1/mapflow/_add_11
 PLUS ONE, a = 3
-170829-12:58:20,526 workflow INFO:
-	 Executing node concat_a_b.aI.a1.b0 in dir: /opt/tutorial/notebooks/hello/_a_1/_b_4/concat_a_b
-170829-12:58:20,544 workflow INFO:
-	 Collecting precomputed outputs
-170829-12:58:20,556 workflow INFO:
-	 Executing node add_1.a1.b0 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_1/_b_4/add_1
-170829-12:58:20,593 workflow INFO:
-	 Executing node _add_10 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_1/_b_4/add_1/mapflow/_add_10
+170903-22:30:14,99 workflow INFO:
+	 Executing node concat_a_b.aI.a1.b0 in dir: /repos/nipype_tutorial/notebooks/hello/_a_1/_b_4/concat_a_b
+170903-22:30:14,106 workflow INFO:
+	 Executing node add_1.a1.b0 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/_b_4/add_1
+170903-22:30:14,110 workflow INFO:
+	 Executing node _add_10 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/_b_4/add_1/mapflow/_add_10
 PLUS ONE, a = 3
-170829-12:58:20,681 workflow INFO:
-	 Executing node _add_11 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_1/_b_4/add_1/mapflow/_add_11
+170903-22:30:14,118 workflow INFO:
+	 Executing node _add_11 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/_b_4/add_1/mapflow/_add_11
 PLUS ONE, a = 4
 </pre>
 </div>
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13440,7 +13421,7 @@ PLUS ONE, a = 4
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">wf</span><span class="o">.</span><span class="n">write_graph</span><span class="p">(</span><span class="n">graph2use</span><span class="o">=</span><span class="s1">&#39;exec&#39;</span><span class="p">)</span>
@@ -13458,19 +13439,19 @@ PLUS ONE, a = 4
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170829-12:58:24,672 workflow INFO:
-	 Generated workflow graph: /opt/tutorial/notebooks/hello_mapnode/graph.dot.png (graph2use=exec, simple_form=True).
+<pre>170903-22:30:14,414 workflow INFO:
+	 Generated workflow graph: /repos/nipype_tutorial/notebooks/hello_mapnode/graph.dot.png (graph2use=exec, simple_form=True).
 </pre>
 </div>
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[16]:</div>
+<div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;/opt/tutorial/notebooks/hello_mapnode/graph.dot.png&#39;</pre>
+<pre>&#39;/repos/nipype_tutorial/notebooks/hello_mapnode/graph.dot.png&#39;</pre>
 </div>
 
 </div>
@@ -13481,7 +13462,7 @@ PLUS ONE, a = 4
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;hello_mapnode/graph_detailed.dot.png&quot;</span><span class="p">)</span>
@@ -13496,7 +13477,7 @@ PLUS ONE, a = 4
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[17]:</div>
+<div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -14268,7 +14249,7 @@ AAAAAACA+vo/6Yhhg/2dnZwAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">merge_and_scale_data</span><span class="p">(</span><span class="n">data2</span><span class="p">):</span>
@@ -14302,80 +14283,76 @@ AAAAAACA+vo/6Yhhg/2dnZwAAAAASUVORK5CYII=
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170829-12:58:34,263 workflow INFO:
+<pre>170903-22:30:15,790 workflow INFO:
 	 Workflow hello_mapnode settings: [&#39;check&#39;, &#39;execution&#39;, &#39;logging&#39;]
-170829-12:58:34,311 workflow INFO:
+170903-22:30:15,805 workflow INFO:
 	 Running serially.
-170829-12:58:34,313 workflow INFO:
-	 Executing node a_plus_b.bI.b1 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_2/a_plus_b
-170829-12:58:34,328 workflow INFO:
+170903-22:30:15,807 workflow INFO:
+	 Executing node a_plus_b.bI.b1 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/a_plus_b
+170903-22:30:15,808 workflow INFO:
 	 Collecting precomputed outputs
-170829-12:58:34,338 workflow INFO:
-	 Executing node concat_a_b.aI.a0.b1 in dir: /opt/tutorial/notebooks/hello/_a_2/_b_3/concat_a_b
-170829-12:58:34,350 workflow INFO:
+170903-22:30:15,810 workflow INFO:
+	 Executing node concat_a_b.aI.a0.b1 in dir: /repos/nipype_tutorial/notebooks/hello/_a_2/_b_3/concat_a_b
+170903-22:30:15,812 workflow INFO:
 	 Collecting precomputed outputs
-170829-12:58:34,363 workflow INFO:
-	 Executing node add_1.a0.b1 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_2/_b_3/add_1
-170829-12:58:34,393 workflow INFO:
-	 Executing node _add_10 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_2/_b_3/add_1/mapflow/_add_10
+170903-22:30:15,814 workflow INFO:
+	 Executing node add_1.a0.b1 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/_b_3/add_1
+170903-22:30:15,818 workflow INFO:
+	 Executing node _add_10 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/_b_3/add_1/mapflow/_add_10
 PLUS ONE, a = 4
-170829-12:58:34,470 workflow INFO:
-	 Executing node _add_11 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_2/_b_3/add_1/mapflow/_add_11
+170903-22:30:15,825 workflow INFO:
+	 Executing node _add_11 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/_b_3/add_1/mapflow/_add_11
 PLUS ONE, a = 3
-170829-12:58:34,573 workflow INFO:
-	 Executing node concat_a_b.aI.a1.b1 in dir: /opt/tutorial/notebooks/hello/_a_2/_b_4/concat_a_b
-170829-12:58:34,588 workflow INFO:
+170903-22:30:15,838 workflow INFO:
+	 Executing node concat_a_b.aI.a1.b1 in dir: /repos/nipype_tutorial/notebooks/hello/_a_2/_b_4/concat_a_b
+170903-22:30:15,839 workflow INFO:
 	 Collecting precomputed outputs
-170829-12:58:34,600 workflow INFO:
-	 Executing node add_1.a1.b1 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_2/_b_4/add_1
-170829-12:58:34,632 workflow INFO:
-	 Executing node _add_10 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_2/_b_4/add_1/mapflow/_add_10
+170903-22:30:15,842 workflow INFO:
+	 Executing node add_1.a1.b1 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/_b_4/add_1
+170903-22:30:15,846 workflow INFO:
+	 Executing node _add_10 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/_b_4/add_1/mapflow/_add_10
 PLUS ONE, a = 4
-170829-12:58:34,724 workflow INFO:
-	 Executing node _add_11 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_2/_b_4/add_1/mapflow/_add_11
+170903-22:30:15,853 workflow INFO:
+	 Executing node _add_11 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_2/_b_4/add_1/mapflow/_add_11
 PLUS ONE, a = 4
-170829-12:58:34,821 workflow INFO:
-	 Executing node a_plus_b.bI.b0 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_1/a_plus_b
-170829-12:58:34,834 workflow INFO:
+170903-22:30:15,861 workflow INFO:
+	 Executing node a_plus_b.bI.b0 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/a_plus_b
+170903-22:30:15,863 workflow INFO:
 	 Collecting precomputed outputs
-170829-12:58:34,850 workflow INFO:
-	 Executing node concat_a_b.aI.a0.b0 in dir: /opt/tutorial/notebooks/hello/_a_1/_b_3/concat_a_b
-170829-12:58:34,865 workflow INFO:
+170903-22:30:15,865 workflow INFO:
+	 Executing node concat_a_b.aI.a0.b0 in dir: /repos/nipype_tutorial/notebooks/hello/_a_1/_b_3/concat_a_b
+170903-22:30:15,867 workflow INFO:
 	 Collecting precomputed outputs
-170829-12:58:34,880 workflow INFO:
-	 Executing node add_1.a0.b0 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_1/_b_3/add_1
-170829-12:58:34,912 workflow INFO:
-	 Executing node _add_10 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_1/_b_3/add_1/mapflow/_add_10
+170903-22:30:15,870 workflow INFO:
+	 Executing node add_1.a0.b0 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/_b_3/add_1
+170903-22:30:15,874 workflow INFO:
+	 Executing node _add_10 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/_b_3/add_1/mapflow/_add_10
 PLUS ONE, a = 3
-170829-12:58:35,5 workflow INFO:
-	 Executing node _add_11 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_1/_b_3/add_1/mapflow/_add_11
+170903-22:30:15,882 workflow INFO:
+	 Executing node _add_11 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/_b_3/add_1/mapflow/_add_11
 PLUS ONE, a = 3
-170829-12:58:35,107 workflow INFO:
-	 Executing node concat_a_b.aI.a1.b0 in dir: /opt/tutorial/notebooks/hello/_a_1/_b_4/concat_a_b
-170829-12:58:35,121 workflow INFO:
+170903-22:30:15,892 workflow INFO:
+	 Executing node concat_a_b.aI.a1.b0 in dir: /repos/nipype_tutorial/notebooks/hello/_a_1/_b_4/concat_a_b
+170903-22:30:15,893 workflow INFO:
 	 Collecting precomputed outputs
-170829-12:58:35,134 workflow INFO:
-	 Executing node add_1.a1.b0 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_1/_b_4/add_1
-170829-12:58:35,164 workflow INFO:
-	 Executing node _add_10 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_1/_b_4/add_1/mapflow/_add_10
+170903-22:30:15,895 workflow INFO:
+	 Executing node add_1.a1.b0 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/_b_4/add_1
+170903-22:30:15,899 workflow INFO:
+	 Executing node _add_10 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/_b_4/add_1/mapflow/_add_10
 PLUS ONE, a = 3
-170829-12:58:35,240 workflow INFO:
-	 Executing node _add_11 in dir: /opt/tutorial/notebooks/hello_mapnode/_a_1/_b_4/add_1/mapflow/_add_11
+170903-22:30:15,907 workflow INFO:
+	 Executing node _add_11 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_a_1/_b_4/add_1/mapflow/_add_11
 PLUS ONE, a = 4
-170829-12:58:35,345 workflow INFO:
-	 Executing node join_scale_data.a1 in dir: /opt/tutorial/notebooks/hello_mapnode/_b_4/join_scale_data
-170829-12:58:35,359 workflow INFO:
-	 Collecting precomputed outputs
-170829-12:58:35,377 workflow INFO:
-	 Executing node join_scale_data.a0 in dir: /opt/tutorial/notebooks/hello_mapnode/_b_3/join_scale_data
-170829-12:58:35,389 workflow INFO:
-	 Collecting precomputed outputs
+170903-22:30:15,916 workflow INFO:
+	 Executing node join_scale_data.a1 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_b_4/join_scale_data
+170903-22:30:15,923 workflow INFO:
+	 Executing node join_scale_data.a0 in dir: /repos/nipype_tutorial/notebooks/hello_mapnode/_b_3/join_scale_data
 </pre>
 </div>
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[18]:</div>
+<div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -14412,7 +14389,7 @@ PLUS ONE, a = 4
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">eg</span><span class="o">.</span><span class="n">nodes</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">outputs</span>
@@ -14427,7 +14404,7 @@ PLUS ONE, a = 4
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[19]:</div>
+<div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -14444,7 +14421,7 @@ data_scaled = [[4000, 4000], [5000, 4000]]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">wf</span><span class="o">.</span><span class="n">write_graph</span><span class="p">(</span><span class="n">graph2use</span><span class="o">=</span><span class="s1">&#39;exec&#39;</span><span class="p">)</span>
@@ -14462,19 +14439,19 @@ data_scaled = [[4000, 4000], [5000, 4000]]</pre>
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170829-12:58:40,477 workflow INFO:
-	 Generated workflow graph: /opt/tutorial/notebooks/hello_mapnode/graph.dot.png (graph2use=exec, simple_form=True).
+<pre>170903-22:30:16,978 workflow INFO:
+	 Generated workflow graph: /repos/nipype_tutorial/notebooks/hello_mapnode/graph.dot.png (graph2use=exec, simple_form=True).
 </pre>
 </div>
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[20]:</div>
+<div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;/opt/tutorial/notebooks/hello_mapnode/graph.dot.png&#39;</pre>
+<pre>&#39;/repos/nipype_tutorial/notebooks/hello_mapnode/graph.dot.png&#39;</pre>
 </div>
 
 </div>
@@ -14485,7 +14462,7 @@ data_scaled = [[4000, 4000], [5000, 4000]]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;hello_mapnode/graph.dot.png&quot;</span><span class="p">)</span>
@@ -14500,7 +14477,7 @@ data_scaled = [[4000, 4000], [5000, 4000]]</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[21]:</div>
+<div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -14939,7 +14916,7 @@ gzEBTCgZDAZjAtIAHJ1rJxgMBmMec/X/AJ2L7vtIlwZqAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;hello_mapnode/graph_detailed.dot.png&quot;</span><span class="p">)</span>
@@ -14954,7 +14931,7 @@ gzEBTCgZDAZjAtIAHJ1rJxgMBmMec/X/AJ2L7vtIlwZqAAAAAElFTkSuQmCC
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[22]:</div>
+<div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -16009,7 +15986,7 @@ ZP0AAAAAAAAAAAAMzf8Dxen+sLJlGvsAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">time</span> eg = wf.run(plugin=&#39;MultiProc&#39;, plugin_args={&#39;n_procs&#39;: 2})
@@ -16027,108 +16004,23 @@ ZP0AAAAAAAAAAAAMzf8Dxen+sLJlGvsAAAAASUVORK5CYII=
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170829-12:58:53,520 workflow INFO:
+<pre>170903-22:30:17,298 workflow INFO:
 	 Workflow hello_mapnode settings: [&#39;check&#39;, &#39;execution&#39;, &#39;logging&#39;]
-170829-12:58:53,570 workflow INFO:
+170903-22:30:17,315 workflow INFO:
 	 Running in parallel.
-170829-12:58:53,577 workflow INFO:
+170903-22:30:17,318 workflow INFO:
 	 Executing: a_plus_b.bI.b1 ID: 0
-170829-12:58:53,588 workflow INFO:
+170903-22:30:17,322 workflow INFO:
 	 [Job finished] jobname: a_plus_b.bI.b1 jobid: 0
-170829-12:58:53,592 workflow INFO:
+170903-22:30:17,324 workflow INFO:
 	 Executing: a_plus_b.bI.b0 ID: 5
-170829-12:58:53,601 workflow INFO:
+170903-22:30:17,325 workflow INFO:
 	 [Job finished] jobname: a_plus_b.bI.b0 jobid: 5
-170829-12:58:53,606 workflow INFO:
-	 Executing: concat_a_b.aI.a0.b1 ID: 1
-170829-12:58:53,622 workflow INFO:
-	 [Job finished] jobname: concat_a_b.aI.a0.b1 jobid: 1
-170829-12:58:53,627 workflow INFO:
-	 Executing: concat_a_b.aI.a1.b1 ID: 3
-170829-12:58:53,644 workflow INFO:
-	 [Job finished] jobname: concat_a_b.aI.a1.b1 jobid: 3
-170829-12:58:53,650 workflow INFO:
-	 Executing: add_1.a0.b1 ID: 2
-170829-12:58:53,666 workflow INFO:
-	 Adding 2 jobs for mapnode add_1.a0.b1
-170829-12:58:53,674 workflow INFO:
-	 Executing: add_1.a1.b1 ID: 4
-170829-12:58:53,687 workflow INFO:
-	 Adding 2 jobs for mapnode add_1.a1.b1
-170829-12:58:53,695 workflow INFO:
-	 Executing: concat_a_b.aI.a0.b0 ID: 6
-170829-12:58:53,710 workflow INFO:
-	 [Job finished] jobname: concat_a_b.aI.a0.b0 jobid: 6
-170829-12:58:53,713 workflow INFO:
-	 Executing: concat_a_b.aI.a1.b0 ID: 8
-170829-12:58:53,725 workflow INFO:
-	 [Job finished] jobname: concat_a_b.aI.a1.b0 jobid: 8
-170829-12:58:53,732 workflow INFO:
-	 Executing: add_1.a0.b0 ID: 7
-170829-12:58:53,747 workflow INFO:
-	 Adding 2 jobs for mapnode add_1.a0.b0
-170829-12:58:53,753 workflow INFO:
-	 Executing: add_1.a1.b0 ID: 9
-170829-12:58:53,767 workflow INFO:
-	 Adding 2 jobs for mapnode add_1.a1.b0
-170829-12:58:53,773 workflow INFO:
-	 Executing: _add_10 ID: 12
-170829-12:58:53,784 workflow INFO:
-	 [Job finished] jobname: _add_10 jobid: 12
-170829-12:58:53,787 workflow INFO:
-	 Executing: _add_11 ID: 13
-170829-12:58:53,799 workflow INFO:
-	 [Job finished] jobname: _add_11 jobid: 13
-170829-12:58:53,803 workflow INFO:
-	 Executing: add_1.a0.b1 ID: 2
-170829-12:58:53,812 workflow INFO:
-	 [Job finished] jobname: add_1.a0.b1 jobid: 2
-170829-12:58:53,815 workflow INFO:
-	 Executing: _add_10 ID: 14
-170829-12:58:53,828 workflow INFO:
-	 [Job finished] jobname: _add_10 jobid: 14
-170829-12:58:53,832 workflow INFO:
-	 Executing: _add_11 ID: 15
-170829-12:58:53,842 workflow INFO:
-	 [Job finished] jobname: _add_11 jobid: 15
-170829-12:58:53,844 workflow INFO:
-	 Executing: _add_10 ID: 16
-170829-12:58:53,854 workflow INFO:
-	 [Job finished] jobname: _add_10 jobid: 16
-170829-12:58:53,859 workflow INFO:
-	 Executing: add_1.a1.b1 ID: 4
-170829-12:58:53,869 workflow INFO:
-	 [Job finished] jobname: add_1.a1.b1 jobid: 4
-170829-12:58:53,872 workflow INFO:
-	 Executing: _add_11 ID: 17
-170829-12:58:53,882 workflow INFO:
-	 [Job finished] jobname: _add_11 jobid: 17
-170829-12:58:53,887 workflow INFO:
-	 Executing: add_1.a0.b0 ID: 7
-170829-12:58:53,899 workflow INFO:
-	 [Job finished] jobname: add_1.a0.b0 jobid: 7
-170829-12:58:53,903 workflow INFO:
-	 Executing: _add_10 ID: 18
-170829-12:58:53,912 workflow INFO:
-	 [Job finished] jobname: _add_10 jobid: 18
-170829-12:58:53,916 workflow INFO:
-	 Executing: join_scale_data.a0 ID: 11
-170829-12:58:53,937 workflow INFO:
-	 [Job finished] jobname: join_scale_data.a0 jobid: 11
-170829-12:58:53,942 workflow INFO:
-	 Executing: _add_11 ID: 19
-170829-12:58:53,953 workflow INFO:
-	 [Job finished] jobname: _add_11 jobid: 19
-170829-12:58:53,958 workflow INFO:
-	 Executing: add_1.a1.b0 ID: 9
-170829-12:58:53,966 workflow INFO:
-	 [Job finished] jobname: add_1.a1.b0 jobid: 9
-170829-12:58:53,971 workflow INFO:
-	 Executing: join_scale_data.a1 ID: 10
-170829-12:58:53,987 workflow INFO:
+...
+170903-22:30:17,437 workflow INFO:
 	 [Job finished] jobname: join_scale_data.a1 jobid: 10
-CPU times: user 210 ms, sys: 80 ms, total: 290 ms
-Wall time: 487 ms
+CPU times: user 136 ms, sys: 36 ms, total: 172 ms
+Wall time: 161 ms
 </pre>
 </div>
 </div>
@@ -16139,7 +16031,7 @@ Wall time: 487 ms
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">wf</span><span class="o">.</span><span class="n">base_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;alt&#39;</span><span class="p">)</span>
@@ -16152,7 +16044,7 @@ Wall time: 487 ms
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">time</span> eg = wf.run(plugin=&#39;MultiProc&#39;, plugin_args={&#39;n_procs&#39;: 2})
@@ -16170,108 +16062,33 @@ Wall time: 487 ms
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170829-12:59:01,216 workflow INFO:
+<pre>170903-22:30:18,129 workflow INFO:
 	 Workflow hello_mapnode settings: [&#39;check&#39;, &#39;execution&#39;, &#39;logging&#39;]
-170829-12:59:01,270 workflow INFO:
+170903-22:30:18,143 workflow INFO:
 	 Running in parallel.
-170829-12:59:01,280 workflow INFO:
+170903-22:30:18,147 workflow INFO:
 	 Executing: a_plus_b.bI.b1 ID: 0
-170829-12:59:01,297 workflow INFO:
-	 [Job finished] jobname: a_plus_b.bI.b1 jobid: 0
-170829-12:59:01,304 workflow INFO:
+170903-22:30:18,149 workflow INFO:
 	 Executing: a_plus_b.bI.b0 ID: 5
-170829-12:59:01,315 workflow INFO:
-	 [Job finished] jobname: a_plus_b.bI.b0 jobid: 5
-170829-12:59:01,320 workflow INFO:
-	 Executing: concat_a_b.aI.a0.b1 ID: 1
-170829-12:59:01,339 workflow INFO:
-	 [Job finished] jobname: concat_a_b.aI.a0.b1 jobid: 1
-170829-12:59:01,342 workflow INFO:
-	 Executing: concat_a_b.aI.a1.b1 ID: 3
-170829-12:59:01,360 workflow INFO:
-	 [Job finished] jobname: concat_a_b.aI.a1.b1 jobid: 3
-170829-12:59:01,366 workflow INFO:
-	 Executing: add_1.a0.b1 ID: 2
-170829-12:59:01,388 workflow INFO:
-	 Adding 2 jobs for mapnode add_1.a0.b1
-170829-12:59:01,396 workflow INFO:
-	 Executing: add_1.a1.b1 ID: 4
-170829-12:59:01,413 workflow INFO:
-	 Adding 2 jobs for mapnode add_1.a1.b1
-170829-12:59:01,422 workflow INFO:
-	 Executing: concat_a_b.aI.a0.b0 ID: 6
-170829-12:59:01,439 workflow INFO:
-	 [Job finished] jobname: concat_a_b.aI.a0.b0 jobid: 6
-170829-12:59:01,441 workflow INFO:
-	 Executing: concat_a_b.aI.a1.b0 ID: 8
-170829-12:59:01,456 workflow INFO:
-	 [Job finished] jobname: concat_a_b.aI.a1.b0 jobid: 8
-170829-12:59:01,462 workflow INFO:
-	 Executing: add_1.a0.b0 ID: 7
-170829-12:59:01,476 workflow INFO:
-	 Adding 2 jobs for mapnode add_1.a0.b0
-170829-12:59:01,484 workflow INFO:
-	 Executing: add_1.a1.b0 ID: 9
-170829-12:59:01,502 workflow INFO:
-	 Adding 2 jobs for mapnode add_1.a1.b0
-170829-12:59:01,510 workflow INFO:
-	 Executing: _add_10 ID: 12
-170829-12:59:01,522 workflow INFO:
-	 [Job finished] jobname: _add_10 jobid: 12
-170829-12:59:01,525 workflow INFO:
-	 Executing: _add_11 ID: 13
-170829-12:59:01,540 workflow INFO:
-	 [Job finished] jobname: _add_11 jobid: 13
-170829-12:59:01,545 workflow INFO:
-	 Executing: add_1.a0.b1 ID: 2
-170829-12:59:01,557 workflow INFO:
-	 [Job finished] jobname: add_1.a0.b1 jobid: 2
-170829-12:59:01,560 workflow INFO:
-	 Executing: _add_10 ID: 14
-170829-12:59:01,573 workflow INFO:
-	 [Job finished] jobname: _add_10 jobid: 14
-170829-12:59:01,580 workflow INFO:
-	 Executing: _add_11 ID: 15
-170829-12:59:01,591 workflow INFO:
-	 [Job finished] jobname: _add_11 jobid: 15
-170829-12:59:01,594 workflow INFO:
-	 Executing: _add_10 ID: 16
-170829-12:59:01,605 workflow INFO:
-	 [Job finished] jobname: _add_10 jobid: 16
-170829-12:59:01,611 workflow INFO:
-	 Executing: add_1.a1.b1 ID: 4
-170829-12:59:01,624 workflow INFO:
-	 [Job finished] jobname: add_1.a1.b1 jobid: 4
-170829-12:59:01,628 workflow INFO:
-	 Executing: _add_11 ID: 17
-170829-12:59:01,640 workflow INFO:
-	 [Job finished] jobname: _add_11 jobid: 17
-170829-12:59:01,646 workflow INFO:
-	 Executing: add_1.a0.b0 ID: 7
-170829-12:59:01,658 workflow INFO:
-	 [Job finished] jobname: add_1.a0.b0 jobid: 7
-170829-12:59:01,661 workflow INFO:
-	 Executing: _add_10 ID: 18
-170829-12:59:01,676 workflow INFO:
-	 [Job finished] jobname: _add_10 jobid: 18
-170829-12:59:01,681 workflow INFO:
-	 Executing: join_scale_data.a0 ID: 11
-170829-12:59:01,700 workflow INFO:
-	 [Job finished] jobname: join_scale_data.a0 jobid: 11
-170829-12:59:01,703 workflow INFO:
-	 Executing: _add_11 ID: 19
-170829-12:59:01,716 workflow INFO:
-	 [Job finished] jobname: _add_11 jobid: 19
-170829-12:59:01,721 workflow INFO:
-	 Executing: add_1.a1.b0 ID: 9
-170829-12:59:01,733 workflow INFO:
+170903-22:30:18,150 workflow INFO:
+	 Executing node a_plus_b.bI.b1 in dir: /repos/nipype_tutorial/notebooks/alt/hello_mapnode/_a_2/a_plus_b
+170903-22:30:18,152 workflow INFO:
+	 Executing node a_plus_b.bI.b0 in dir: /repos/nipype_tutorial/notebooks/alt/hello_mapnode/_a_1/a_plus_b
+170903-22:30:18,161 workflow INFO:
+	 [Job finished] jobname: a_plus_b.bI.b1 jobid: 0
+...
+170903-22:30:18,360 workflow INFO:
+	 Collecting precomputed outputs
+170903-22:30:18,369 workflow INFO:
 	 [Job finished] jobname: add_1.a1.b0 jobid: 9
-170829-12:59:01,740 workflow INFO:
+170903-22:30:18,374 workflow INFO:
 	 Executing: join_scale_data.a1 ID: 10
-170829-12:59:01,758 workflow INFO:
+170903-22:30:18,377 workflow INFO:
+	 Executing node join_scale_data.a1 in dir: /repos/nipype_tutorial/notebooks/alt/hello_mapnode/_b_4/join_scale_data
+170903-22:30:18,384 workflow INFO:
 	 [Job finished] jobname: join_scale_data.a1 jobid: 10
-CPU times: user 250 ms, sys: 100 ms, total: 350 ms
-Wall time: 566 ms
+CPU times: user 212 ms, sys: 32 ms, total: 244 ms
+Wall time: 269 ms
 </pre>
 </div>
 </div>
@@ -16282,7 +16099,7 @@ Wall time: 566 ms
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">time</span> eg = wf.run(plugin=&#39;MultiProc&#39;, plugin_args={&#39;n_procs&#39;: 2})
@@ -16300,108 +16117,37 @@ Wall time: 566 ms
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170829-12:59:27,443 workflow INFO:
+<pre>170903-22:30:19,58 workflow INFO:
 	 Workflow hello_mapnode settings: [&#39;check&#39;, &#39;execution&#39;, &#39;logging&#39;]
-170829-12:59:27,522 workflow INFO:
+170903-22:30:19,73 workflow INFO:
 	 Running in parallel.
-170829-12:59:27,533 workflow INFO:
+170903-22:30:19,77 workflow INFO:
 	 Executing: a_plus_b.bI.b1 ID: 0
-170829-12:59:27,547 workflow INFO:
+170903-22:30:19,80 workflow INFO:
 	 [Job finished] jobname: a_plus_b.bI.b1 jobid: 0
-170829-12:59:27,553 workflow INFO:
+170903-22:30:19,82 workflow INFO:
 	 Executing: a_plus_b.bI.b0 ID: 5
-170829-12:59:27,566 workflow INFO:
+170903-22:30:19,84 workflow INFO:
 	 [Job finished] jobname: a_plus_b.bI.b0 jobid: 5
-170829-12:59:27,577 workflow INFO:
+170903-22:30:19,89 workflow INFO:
 	 Executing: concat_a_b.aI.a0.b1 ID: 1
-170829-12:59:27,595 workflow INFO:
+170903-22:30:19,92 workflow INFO:
 	 [Job finished] jobname: concat_a_b.aI.a0.b1 jobid: 1
-170829-12:59:27,599 workflow INFO:
+170903-22:30:19,94 workflow INFO:
 	 Executing: concat_a_b.aI.a1.b1 ID: 3
-170829-12:59:27,625 workflow INFO:
+170903-22:30:19,96 workflow INFO:
 	 [Job finished] jobname: concat_a_b.aI.a1.b1 jobid: 3
-170829-12:59:27,631 workflow INFO:
+170903-22:30:19,103 workflow INFO:
 	 Executing: add_1.a0.b1 ID: 2
-170829-12:59:27,651 workflow INFO:
+170903-22:30:19,107 workflow INFO:
 	 Adding 2 jobs for mapnode add_1.a0.b1
-170829-12:59:27,659 workflow INFO:
+170903-22:30:19,111 workflow INFO:
 	 Executing: add_1.a1.b1 ID: 4
-170829-12:59:27,672 workflow INFO:
-	 Adding 2 jobs for mapnode add_1.a1.b1
-170829-12:59:27,682 workflow INFO:
-	 Executing: concat_a_b.aI.a0.b0 ID: 6
-170829-12:59:27,696 workflow INFO:
-	 [Job finished] jobname: concat_a_b.aI.a0.b0 jobid: 6
-170829-12:59:27,700 workflow INFO:
-	 Executing: concat_a_b.aI.a1.b0 ID: 8
-170829-12:59:27,717 workflow INFO:
-	 [Job finished] jobname: concat_a_b.aI.a1.b0 jobid: 8
-170829-12:59:27,726 workflow INFO:
-	 Executing: add_1.a0.b0 ID: 7
-170829-12:59:27,745 workflow INFO:
-	 Adding 2 jobs for mapnode add_1.a0.b0
-170829-12:59:27,760 workflow INFO:
-	 Executing: add_1.a1.b0 ID: 9
-170829-12:59:27,776 workflow INFO:
-	 Adding 2 jobs for mapnode add_1.a1.b0
-170829-12:59:27,785 workflow INFO:
-	 Executing: _add_10 ID: 12
-170829-12:59:27,796 workflow INFO:
-	 [Job finished] jobname: _add_10 jobid: 12
-170829-12:59:27,800 workflow INFO:
-	 Executing: _add_11 ID: 13
-170829-12:59:27,814 workflow INFO:
-	 [Job finished] jobname: _add_11 jobid: 13
-170829-12:59:27,820 workflow INFO:
-	 Executing: add_1.a0.b1 ID: 2
-170829-12:59:27,831 workflow INFO:
-	 [Job finished] jobname: add_1.a0.b1 jobid: 2
-170829-12:59:27,836 workflow INFO:
-	 Executing: _add_10 ID: 14
-170829-12:59:27,845 workflow INFO:
-	 [Job finished] jobname: _add_10 jobid: 14
-170829-12:59:27,852 workflow INFO:
-	 Executing: _add_11 ID: 15
-170829-12:59:27,866 workflow INFO:
-	 [Job finished] jobname: _add_11 jobid: 15
-170829-12:59:27,869 workflow INFO:
-	 Executing: _add_10 ID: 16
-170829-12:59:27,881 workflow INFO:
-	 [Job finished] jobname: _add_10 jobid: 16
-170829-12:59:27,886 workflow INFO:
-	 Executing: add_1.a1.b1 ID: 4
-170829-12:59:27,896 workflow INFO:
-	 [Job finished] jobname: add_1.a1.b1 jobid: 4
-170829-12:59:27,900 workflow INFO:
-	 Executing: _add_11 ID: 17
-170829-12:59:27,911 workflow INFO:
-	 [Job finished] jobname: _add_11 jobid: 17
-170829-12:59:27,917 workflow INFO:
-	 Executing: add_1.a0.b0 ID: 7
-170829-12:59:27,934 workflow INFO:
-	 [Job finished] jobname: add_1.a0.b0 jobid: 7
-170829-12:59:27,938 workflow INFO:
-	 Executing: _add_10 ID: 18
-170829-12:59:27,949 workflow INFO:
-	 [Job finished] jobname: _add_10 jobid: 18
-170829-12:59:27,957 workflow INFO:
-	 Executing: join_scale_data.a0 ID: 11
-170829-12:59:27,973 workflow INFO:
-	 [Job finished] jobname: join_scale_data.a0 jobid: 11
-170829-12:59:27,976 workflow INFO:
-	 Executing: _add_11 ID: 19
-170829-12:59:27,988 workflow INFO:
-	 [Job finished] jobname: _add_11 jobid: 19
-170829-12:59:27,994 workflow INFO:
-	 Executing: add_1.a1.b0 ID: 9
-170829-12:59:28,5 workflow INFO:
-	 [Job finished] jobname: add_1.a1.b0 jobid: 9
-170829-12:59:28,10 workflow INFO:
-	 Executing: join_scale_data.a1 ID: 10
-170829-12:59:28,32 workflow INFO:
+...
+170903-22:30:19,219 workflow INFO:
 	 [Job finished] jobname: join_scale_data.a1 jobid: 10
-CPU times: user 270 ms, sys: 140 ms, total: 410 ms
-Wall time: 623 ms
+CPU times: user 144 ms, sys: 36 ms, total: 180 ms
+Wall time: 177 ms
 </pre>
 </div>
 </div>
@@ -16425,7 +16171,7 @@ $$\sum _{k=0}^{3} k! = 0! + 1! +2! + 3!  =  1 + 1 + 2 + 6 = 10$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nipype</span> <span class="k">import</span> <span class="n">Workflow</span><span class="p">,</span> <span class="n">Node</span><span class="p">,</span> <span class="n">MapNode</span><span class="p">,</span> <span class="n">Function</span>
@@ -16477,35 +16223,6 @@ $$\sum _{k=0}^{3} k! = 0! + 1! +2! + 3!  =  1 + 1 + 2 + 6 = 10$$</p>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>170829-12:59:35,43 workflow INFO:
-	 Workflow ex1 settings: [&#39;check&#39;, &#39;execution&#39;, &#39;logging&#39;]
-170829-12:59:35,85 workflow INFO:
-	 Running serially.
-170829-12:59:35,87 workflow INFO:
-	 Executing node range_list in dir: /opt/tutorial/notebooks/ex1/range_list
-170829-12:59:35,101 workflow INFO:
-	 Collecting precomputed outputs
-170829-12:59:35,117 workflow INFO:
-	 Executing node factorial in dir: /opt/tutorial/notebooks/ex1/factorial
-170829-12:59:35,141 workflow INFO:
-	 Executing node summing in dir: /opt/tutorial/notebooks/ex1/summing
-170829-12:59:35,154 workflow INFO:
-	 Collecting precomputed outputs
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -16519,31 +16236,13 @@ $$\sum _{k=0}^{3} k! = 0! + 1! +2! + 3!  =  1 + 1 + 2 + 6 = 10$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">eg</span><span class="o">.</span><span class="n">nodes</span><span class="p">()</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[28]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[ex1.range_list, ex1.factorial, ex1.summing]</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -16560,32 +16259,13 @@ $$\sum _{k=0}^{3} k! = 0! + 1! +2! + 3!  =  1 + 1 + 2 + 6 = 10$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">eg</span><span class="o">.</span><span class="n">nodes</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">outputs</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[29]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>
-sum_out = 10</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -16602,7 +16282,7 @@ sum_out = 10</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">eg</span><span class="o">.</span><span class="n">nodes</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">outputs</span><span class="p">)</span>
@@ -16613,29 +16293,10 @@ sum_out = 10</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-range_list = [0, 1, 2, 3]
-
-Bunch(fact_out=[1, 1, 2, 6])
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#write your code here</span>
@@ -16668,7 +16329,7 @@ Bunch(fact_out=[1, 1, 2, 6])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># we can reuse function from previous exercise, but they need some edits</span>
@@ -16726,49 +16387,6 @@ Bunch(fact_out=[1, 1, 2, 6])
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>170829-12:59:46,176 workflow INFO:
-	 Workflow ex2 settings: [&#39;check&#39;, &#39;execution&#39;, &#39;logging&#39;]
-170829-12:59:46,230 workflow INFO:
-	 Running serially.
-170829-12:59:46,231 workflow INFO:
-	 Executing node range_list in dir: /opt/tutorial/notebooks/ex2/range_list
-170829-12:59:46,243 workflow INFO:
-	 Collecting precomputed outputs
-170829-12:59:46,252 workflow INFO:
-	 Executing node term.aI.a0 in dir: /opt/tutorial/notebooks/ex2/_x_0/term
-170829-12:59:46,276 workflow INFO:
-	 Executing node summing.a0 in dir: /opt/tutorial/notebooks/ex2/_x_0/summing
-170829-12:59:46,350 workflow INFO:
-	 Executing node term.aI.a1 in dir: /opt/tutorial/notebooks/ex2/_x_1.5707963267948966/term
-170829-12:59:46,371 workflow INFO:
-	 Executing node summing.a1 in dir: /opt/tutorial/notebooks/ex2/_x_1.5707963267948966/summing
-170829-12:59:46,436 workflow INFO:
-	 Executing node term.aI.a2 in dir: /opt/tutorial/notebooks/ex2/_x_3.141592653589793/term
-170829-12:59:46,456 workflow INFO:
-	 Executing node summing.a2 in dir: /opt/tutorial/notebooks/ex2/_x_3.141592653589793/summing
-170829-12:59:46,520 workflow INFO:
-	 Executing node term.aI.a3 in dir: /opt/tutorial/notebooks/ex2/_x_4.71238898038469/term
-170829-12:59:46,540 workflow INFO:
-	 Executing node summing.a3 in dir: /opt/tutorial/notebooks/ex2/_x_4.71238898038469/summing
-170829-12:59:46,607 workflow INFO:
-	 Executing node term.aI.a4 in dir: /opt/tutorial/notebooks/ex2/_x_6.283185307179586/term
-170829-12:59:46,627 workflow INFO:
-	 Executing node summing.a4 in dir: /opt/tutorial/notebooks/ex2/_x_6.283185307179586/summing
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -16782,41 +16400,13 @@ Bunch(fact_out=[1, 1, 2, 6])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">eg</span><span class="o">.</span><span class="n">nodes</span><span class="p">()</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[33]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[ex2.range_list,
- ex2.term.aI.a0,
- ex2.summing.a0,
- ex2.term.aI.a1,
- ex2.summing.a1,
- ex2.term.aI.a2,
- ex2.summing.a2,
- ex2.term.aI.a3,
- ex2.summing.a3,
- ex2.term.aI.a4,
- ex2.summing.a4]</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -16833,7 +16423,7 @@ Bunch(fact_out=[1, 1, 2, 6])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">eg</span><span class="o">.</span><span class="n">nodes</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">outputs</span><span class="p">)</span>
@@ -16844,36 +16434,6 @@ Bunch(fact_out=[1, 1, 2, 6])
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-sum_out = 0.0
-
-
-sum_out = 1.0000000000000002
-
-
-sum_out = 3.328027611925569e-16
-
-
-sum_out = -1.0000000000000022
-
-
-sum_out = -2.4376365177316827e-11
-
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -16890,7 +16450,7 @@ sum_out = -2.4376365177316827e-11
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># write your solution here</span>
@@ -16924,7 +16484,7 @@ sum_out = -2.4376365177316827e-11
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">merge_results</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
@@ -16950,53 +16510,6 @@ sum_out = -2.4376365177316827e-11
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>170829-12:59:53,494 workflow INFO:
-	 Workflow ex2 settings: [&#39;check&#39;, &#39;execution&#39;, &#39;logging&#39;]
-170829-12:59:53,548 workflow INFO:
-	 Running serially.
-170829-12:59:53,551 workflow INFO:
-	 Executing node range_list in dir: /opt/tutorial/notebooks/ex2/range_list
-170829-12:59:53,571 workflow INFO:
-	 Collecting precomputed outputs
-170829-12:59:53,582 workflow INFO:
-	 Executing node term.aI.a0 in dir: /opt/tutorial/notebooks/ex2/_x_0/term
-170829-12:59:53,610 workflow INFO:
-	 Executing node summing.a0 in dir: /opt/tutorial/notebooks/ex2/_x_0/summing
-170829-12:59:53,707 workflow INFO:
-	 Executing node term.aI.a1 in dir: /opt/tutorial/notebooks/ex2/_x_1.5707963267948966/term
-170829-12:59:53,733 workflow INFO:
-	 Executing node summing.a1 in dir: /opt/tutorial/notebooks/ex2/_x_1.5707963267948966/summing
-170829-12:59:53,806 workflow INFO:
-	 Executing node term.aI.a2 in dir: /opt/tutorial/notebooks/ex2/_x_3.141592653589793/term
-170829-12:59:53,830 workflow INFO:
-	 Executing node summing.a2 in dir: /opt/tutorial/notebooks/ex2/_x_3.141592653589793/summing
-170829-12:59:53,938 workflow INFO:
-	 Executing node term.aI.a3 in dir: /opt/tutorial/notebooks/ex2/_x_4.71238898038469/term
-170829-12:59:53,971 workflow INFO:
-	 Executing node summing.a3 in dir: /opt/tutorial/notebooks/ex2/_x_4.71238898038469/summing
-170829-12:59:54,67 workflow INFO:
-	 Executing node term.aI.a4 in dir: /opt/tutorial/notebooks/ex2/_x_6.283185307179586/term
-170829-12:59:54,88 workflow INFO:
-	 Executing node summing.a4 in dir: /opt/tutorial/notebooks/ex2/_x_6.283185307179586/summing
-170829-12:59:54,184 workflow INFO:
-	 Executing node merge in dir: /opt/tutorial/notebooks/ex2/merge
-170829-12:59:54,199 workflow INFO:
-	 Collecting precomputed outputs
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -17010,42 +16523,13 @@ sum_out = -2.4376365177316827e-11
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">eg</span><span class="o">.</span><span class="n">nodes</span><span class="p">()</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[37]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[ex2.range_list,
- ex2.merge,
- ex2.term.aI.a0,
- ex2.summing.a0,
- ex2.term.aI.a1,
- ex2.summing.a1,
- ex2.term.aI.a2,
- ex2.summing.a2,
- ex2.term.aI.a3,
- ex2.summing.a3,
- ex2.term.aI.a4,
- ex2.summing.a4]</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -17062,7 +16546,7 @@ sum_out = -2.4376365177316827e-11
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">eg</span><span class="o">.</span><span class="n">nodes</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">outputs</span>
@@ -17072,29 +16556,10 @@ sum_out = -2.4376365177316827e-11
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[38]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>
-results_cont = {0: 0.0, 1.5707963267948966: 1.0000000000000002, 3.141592653589793: 3.328027611925569e-16, 4.71238898038469: -1.0000000000000022, 6.283185307179586: -2.4376365177316827e-11}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># write your code here</span>

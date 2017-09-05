@@ -11654,8 +11654,10 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11666,9 +11668,11 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11834,7 +11838,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;nilearn.plotting.displays.OrthoSlicer at 0x7f7aefa2a0b8&gt;</pre>
+<pre>&lt;nilearn.plotting.displays.OrthoSlicer at 0x7f0399abdf28&gt;</pre>
 </div>
 
 </div>
@@ -13182,7 +13186,7 @@ bet <span class="si">${</span><span class="nv">FILENAME</span><span class="si">}
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;nilearn.plotting.displays.OrthoSlicer at 0x7f7af30adb70&gt;</pre>
+<pre>&lt;nilearn.plotting.displays.OrthoSlicer at 0x7f039e18fb38&gt;</pre>
 </div>
 
 </div>
@@ -13904,22 +13908,12 @@ bet <span class="si">${</span><span class="nv">FILENAME</span><span class="si">}
 
 
 <div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/opt/conda/envs/neuro/lib/python3.6/site-packages/nilearn/image/resampling.py:481: UserWarning: Casting data from int32 to float32
-  warnings.warn(&#34;Casting data from %s to %s&#34; % (data.dtype.name, aux))
-</pre>
-</div>
-</div>
-
-<div class="output_area">
 <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;nilearn.plotting.displays.OrthoSlicer at 0x7f7af2eb90b8&gt;</pre>
+<pre>&lt;nilearn.plotting.displays.OrthoSlicer at 0x7f039c797128&gt;</pre>
 </div>
 
 </div>
@@ -14179,7 +14173,7 @@ YKggIiKodDaFAAAAFklEQVQiUzBUEBERkSkYKoiIiMgU/w+cgSPgn48MHQAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;nilearn.plotting.displays.OrthoSlicer at 0x7f7af21fd0b8&gt;</pre>
+<pre>&lt;nilearn.plotting.displays.OrthoSlicer at 0x7f03b30ab6a0&gt;</pre>
 </div>
 
 </div>
@@ -14880,22 +14874,12 @@ rkJggg==
 
 
 <div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/opt/conda/envs/neuro/lib/python3.6/site-packages/nilearn/image/resampling.py:481: UserWarning: Casting data from int32 to float32
-  warnings.warn(&#34;Casting data from %s to %s&#34; % (data.dtype.name, aux))
-</pre>
-</div>
-</div>
-
-<div class="output_area">
 <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;nilearn.plotting.displays.OrthoSlicer at 0x7f7af2070a90&gt;</pre>
+<pre>&lt;nilearn.plotting.displays.OrthoSlicer at 0x7f03b2eab160&gt;</pre>
 </div>
 
 </div>
@@ -15270,7 +15254,7 @@ Examples
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>/opt/tutorial/notebooks/T1w_nipype_bet_mask.nii.gz
+<pre>/repos/nipype_tutorial/notebooks/T1w_nipype_bet_mask.nii.gz
 </pre>
 </div>
 </div>
@@ -15327,19 +15311,19 @@ Examples
 <span class="ansi-green-intense-fg ansi-bold">      1</span> skullstrip2 <span class="ansi-blue-fg">=</span> BET<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>skullstrip2<span class="ansi-blue-fg">.</span>run<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-green-fg">/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/interfaces/base.py</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(self, **inputs)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1064</span>         &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">   1065</span>         self<span class="ansi-blue-fg">.</span>inputs<span class="ansi-blue-fg">.</span>trait_set<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">**</span>inputs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 1066</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_check_mandatory_inputs<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1067</span>         self<span class="ansi-blue-fg">.</span>_check_version_requirements<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>inputs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1068</span>         interface <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>__class__
+<span class="ansi-green-fg">/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/interfaces/base.py</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(self, **inputs)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1065</span>         &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">   1066</span>         self<span class="ansi-blue-fg">.</span>inputs<span class="ansi-blue-fg">.</span>trait_set<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">**</span>inputs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">-&gt; 1067</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_check_mandatory_inputs<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1068</span>         self<span class="ansi-blue-fg">.</span>_check_version_requirements<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>inputs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1069</span>         interface <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>__class__
 
-<span class="ansi-green-fg">/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/interfaces/base.py</span> in <span class="ansi-cyan-fg">_check_mandatory_inputs</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    969</span>                        <span class="ansi-blue-fg">&#34;For a list of required inputs, see %s.help()&#34;</span> <span class="ansi-blue-fg">%</span>
-<span class="ansi-green-intense-fg ansi-bold">    970</span>                        (self.__class__.__name__, name, self.__class__.__name__))
-<span class="ansi-green-fg">--&gt; 971</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">raise</span> ValueError<span class="ansi-blue-fg">(</span>msg<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    972</span>             <span class="ansi-green-fg">if</span> isdefined<span class="ansi-blue-fg">(</span>value<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    973</span>                 self<span class="ansi-blue-fg">.</span>_check_requires<span class="ansi-blue-fg">(</span>spec<span class="ansi-blue-fg">,</span> name<span class="ansi-blue-fg">,</span> value<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/interfaces/base.py</span> in <span class="ansi-cyan-fg">_check_mandatory_inputs</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    970</span>                        <span class="ansi-blue-fg">&#34;For a list of required inputs, see %s.help()&#34;</span> <span class="ansi-blue-fg">%</span>
+<span class="ansi-green-intense-fg ansi-bold">    971</span>                        (self.__class__.__name__, name, self.__class__.__name__))
+<span class="ansi-green-fg">--&gt; 972</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">raise</span> ValueError<span class="ansi-blue-fg">(</span>msg<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    973</span>             <span class="ansi-green-fg">if</span> isdefined<span class="ansi-blue-fg">(</span>value<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    974</span>                 self<span class="ansi-blue-fg">.</span>_check_requires<span class="ansi-blue-fg">(</span>spec<span class="ansi-blue-fg">,</span> name<span class="ansi-blue-fg">,</span> value<span class="ansi-blue-fg">)</span>
 
 <span class="ansi-red-fg">ValueError</span>: BET requires a value for input &#39;in_file&#39;. For a list of required inputs, see BET.help()</pre>
 </div>
@@ -15385,7 +15369,7 @@ Examples
 <span class="ansi-green-fg">&lt;ipython-input-16-44592757e5e0&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>skullstrip<span class="ansi-blue-fg">.</span>inputs<span class="ansi-blue-fg">.</span>mask <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#34;mask_file.nii&#34;</span>
 
-<span class="ansi-green-fg">/opt/conda/envs/neuro/lib/python3.6/site-packages/traits/trait_handlers.py</span> in <span class="ansi-cyan-fg">error</span><span class="ansi-blue-fg">(self, object, name, value)</span>
+<span class="ansi-green-fg">/opt/conda/envs/neuro3/lib/python3.6/site-packages/traits/trait_handlers.py</span> in <span class="ansi-cyan-fg">error</span><span class="ansi-blue-fg">(self, object, name, value)</span>
 <span class="ansi-green-intense-fg ansi-bold">    170</span>         &#34;&#34;&#34;
 <span class="ansi-green-intense-fg ansi-bold">    171</span>         raise TraitError( object, name, self.full_info( object, name, value ),
 <span class="ansi-green-fg">--&gt; 172</span><span class="ansi-red-fg">                           value )
@@ -15436,7 +15420,7 @@ Examples
 <span class="ansi-green-fg">&lt;ipython-input-17-7a60dcde5660&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>skullstrip<span class="ansi-blue-fg">.</span>inputs<span class="ansi-blue-fg">.</span>in_file <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#34;/data/oops_a_typo.nii&#34;</span>
 
-<span class="ansi-green-fg">/opt/conda/envs/neuro/lib/python3.6/site-packages/nipype/interfaces/traits_extension.py</span> in <span class="ansi-cyan-fg">validate</span><span class="ansi-blue-fg">(self, object, name, value)</span>
+<span class="ansi-green-fg">/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/interfaces/traits_extension.py</span> in <span class="ansi-cyan-fg">validate</span><span class="ansi-blue-fg">(self, object, name, value)</span>
 <span class="ansi-green-intense-fg ansi-bold">     90</span>                 args<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;The trait \&#39;{}\&#39; of {} instance is {}, but the path &#39;</span>
 <span class="ansi-green-intense-fg ansi-bold">     91</span>                      &#39; \&#39;{}\&#39; does not exist.&#39;.format(name, class_of(object),
 <span class="ansi-green-fg">---&gt; 92</span><span class="ansi-red-fg">                                                       self.info_text, value))
@@ -15482,7 +15466,7 @@ Examples
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>bet /data/ds000114/sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz /opt/tutorial/notebooks/sub-01_ses-test_T1w_brain.nii.gz
+<pre>bet /data/ds000114/sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz /repos/nipype_tutorial/notebooks/sub-01_ses-test_T1w_brain.nii.gz
 </pre>
 </div>
 </div>
@@ -15528,7 +15512,7 @@ inskull_mask_file = &lt;undefined&gt;
 inskull_mesh_file = &lt;undefined&gt;
 mask_file = &lt;undefined&gt;
 meshfile = &lt;undefined&gt;
-out_file = /opt/tutorial/notebooks/sub-01_ses-test_T1w_brain.nii.gz
+out_file = /repos/nipype_tutorial/notebooks/sub-01_ses-test_T1w_brain.nii.gz
 outline_file = &lt;undefined&gt;
 outskin_mask_file = &lt;undefined&gt;
 outskin_mesh_file = &lt;undefined&gt;
@@ -15578,9 +15562,9 @@ skull_mask_file = &lt;undefined&gt;
 <pre>
 inskull_mask_file = &lt;undefined&gt;
 inskull_mesh_file = &lt;undefined&gt;
-mask_file = /opt/tutorial/notebooks/sub-01_ses-test_T1w_brain_mask.nii.gz
+mask_file = /repos/nipype_tutorial/notebooks/sub-01_ses-test_T1w_brain_mask.nii.gz
 meshfile = &lt;undefined&gt;
-out_file = /opt/tutorial/notebooks/sub-01_ses-test_T1w_brain.nii.gz
+out_file = /repos/nipype_tutorial/notebooks/sub-01_ses-test_T1w_brain.nii.gz
 outline_file = &lt;undefined&gt;
 outskin_mask_file = &lt;undefined&gt;
 outskin_mesh_file = &lt;undefined&gt;

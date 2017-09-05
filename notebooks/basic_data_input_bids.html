@@ -11654,8 +11654,10 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11666,9 +11668,11 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11851,12 +11855,39 @@ div#notebook {
 ├── dataset_description.json
 ├── derivatives
 │   ├── fmriprep
+│   │   ├── mni_icbm152_nlin_asym_09c
+│   │   │   ├── 1mm_brainmask.nii.gz
+│   │   │   ├── 1mm_eyemask.nii.gz
+│   │   │   ├── 1mm_facemask.nii.gz
+│   │   │   ├── 1mm_headmask.nii.gz
+│   │   │   ├── 1mm_parc.nii.gz
+│   │   │   ├── 1mm_PD.nii.gz
+│   │   │   ├── 1mm_PD_orig.nii.gz
+│   │   │   ├── 1mm_T1.nii.gz
+│   │   │   ├── 1mm_T1_orig.nii.gz
+│   │   │   ├── 1mm_T2.nii.gz
+│   │   │   ├── 1mm_T2_orig.nii.gz
+│   │   │   ├── 1mm_tpm_csf.nii.gz
+│   │   │   ├── 1mm_tpm_gm.nii.gz
+│   │   │   ├── 1mm_tpm_wm.nii.gz
+│   │   │   ├── 2mm_brainmask.nii.gz
+│   │   │   ├── 2mm_eyemask.nii.gz
+│   │   │   ├── 2mm_facemask.nii.gz
+│   │   │   ├── 2mm_headmask.nii.gz
+│   │   │   ├── 2mm_parc.nii.gz
+│   │   │   ├── 2mm_PD.nii.gz
+│   │   │   ├── 2mm_T1.nii.gz
+│   │   │   ├── 2mm_T2.nii.gz
+│   │   │   ├── 2mm_tpm_csf.nii.gz
+│   │   │   ├── 2mm_tpm_gm.nii.gz
+│   │   │   ├── 2mm_tpm_wm.nii.gz
+│   │   │   └── scripts
 │   │   ├── sub-01
 │   │   │   ├── anat
 │   │   │   ├── ses-retest
 │   │   │   └── ses-test
 │   │   ├── sub-01.html
-│   │   ├── sub-02..sub-10
+│   │   ├── sub-02...sub-10
 │   └── freesurfer
 │       ├── fsaverage
 │       │   ├── label
@@ -11865,6 +11896,14 @@ div#notebook {
 │       │   ├── scripts
 │       │   ├── surf
 │       │   └── xhemi
+│       ├── fsaverage5
+│       │   ├── label
+│       │   ├── lh.reg.template.tif
+│       │   ├── mri
+│       │   ├── rh.reg.template.tif
+│       │   ├── scripts
+│       │   ├── stats
+│       │   └── surf
 │       ├── sub-01
 │       │   ├── label
 │       │   ├── mri
@@ -11872,7 +11911,7 @@ div#notebook {
 │       │   ├── stats
 │       │   ├── surf
 │       │   └── touch
-│       └── sub-02..sub-10
+│       └── sub-02...sub-10
 ├── dwi.bval
 ├── dwi.bvec
 ├── sub-01
@@ -11900,7 +11939,7 @@ div#notebook {
 │           ├── sub-01_ses-test_task-linebisection_events.tsv
 │           ├── sub-01_ses-test_task-overtverbgeneration_bold.nii.gz
 │           └── sub-01_ses-test_task-overtwordrepetition_bold.nii.gz
-├── sub-02..sub-10
+├── sub-02...sub-10
 ├── task-covertverbgeneration_bold.json
 ├── task-covertverbgeneration_events.tsv
 ├── task-fingerfootlips_bold.json
@@ -11911,7 +11950,7 @@ div#notebook {
 ├── task-overtwordrepetition_bold.json
 └── task-overtwordrepetition_events.tsv
 
-216 directories, 185 files
+218 directories, 210 files
 </pre>
 </div>
 </div>
@@ -12034,7 +12073,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&#39;bold&#39;, &#39;brainmask&#39;, &#39;confounds&#39;, &#39;events&#39;, &#39;preproc&#39;]</pre>
+<pre>[&#39;bold&#39;, &#39;brainmask&#39;, &#39;confounds&#39;, &#39;events&#39;, &#39;fsaverage5&#39;, &#39;preproc&#39;]</pre>
 </div>
 
 </div>
@@ -12372,8 +12411,8 @@ div#notebook {
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170730-12:38:06,719 workflow INFO:
-	 Executing node BIDSDataGrabber in dir: /tmp/tmp1jrhegfx/BIDSDataGrabber
+<pre>170904-05:41:32,143 workflow INFO:
+	 Executing node BIDSDataGrabber in dir: /tmp/tmppp9obk8m/BIDSDataGrabber
 </pre>
 </div>
 </div>
@@ -12443,14 +12482,14 @@ bolds = [&#39;/data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-cover
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170730-12:38:14,276 workflow INFO:
+<pre>170904-05:41:37,713 workflow INFO:
 	 Workflow bids_demo settings: [&#39;check&#39;, &#39;execution&#39;, &#39;logging&#39;]
-170730-12:38:14,295 workflow INFO:
+170904-05:41:37,719 workflow INFO:
 	 Running serially.
-170730-12:38:14,296 workflow INFO:
-	 Executing node BIDSDataGrabber in dir: /tmp/tmpr1tk4bil/bids_demo/BIDSDataGrabber
-170730-12:38:23,796 workflow INFO:
-	 Executing node analyzeBOLD in dir: /tmp/tmpin5zrkxe/bids_demo/analyzeBOLD
+170904-05:41:37,721 workflow INFO:
+	 Executing node BIDSDataGrabber in dir: /tmp/tmpaf1g0sbc/bids_demo/BIDSDataGrabber
+170904-05:41:38,119 workflow INFO:
+	 Executing node analyzeBOLD in dir: /tmp/tmpk3f9hfaf/bids_demo/analyzeBOLD
 
 
 analyzing [&#39;/data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-covertverbgeneration_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-fingerfootlips_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-linebisection_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-overtverbgeneration_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-overtwordrepetition_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-covertverbgeneration_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-fingerfootlips_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-linebisection_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-overtverbgeneration_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-overtwordrepetition_bold.nii.gz&#39;]
@@ -12466,7 +12505,7 @@ analyzing [&#39;/data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-cov
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;networkx.classes.digraph.DiGraph at 0x7efca7967da0&gt;</pre>
+<pre>&lt;networkx.classes.digraph.DiGraph at 0x7f986846e438&gt;</pre>
 </div>
 
 </div>
@@ -12516,23 +12555,23 @@ analyzing [&#39;/data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-cov
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170730-12:38:23,864 workflow INFO:
+<pre>170904-05:41:39,742 workflow INFO:
 	 Workflow bids_demo settings: [&#39;check&#39;, &#39;execution&#39;, &#39;logging&#39;]
-170730-12:38:23,897 workflow INFO:
+170904-05:41:39,750 workflow INFO:
 	 Running serially.
-170730-12:38:23,900 workflow INFO:
-	 Executing node BIDSDataGrabber.aI.a1 in dir: /tmp/tmpulcre1g9/bids_demo/_subject_id_02/BIDSDataGrabber
-170730-12:38:32,981 workflow INFO:
-	 Executing node analyzeBOLD.a1 in dir: /tmp/tmp4a39jj34/bids_demo/_subject_id_02/analyzeBOLD
+170904-05:41:39,751 workflow INFO:
+	 Executing node BIDSDataGrabber.aI.a1 in dir: /tmp/tmp1zylbx6z/bids_demo/_subject_id_02/BIDSDataGrabber
+170904-05:41:40,141 workflow INFO:
+	 Executing node analyzeBOLD.a1 in dir: /tmp/tmp59wngf32/bids_demo/_subject_id_02/analyzeBOLD
 
 
 analyzing [&#39;/data/ds000114/sub-02/ses-retest/func/sub-02_ses-retest_task-covertverbgeneration_bold.nii.gz&#39;, &#39;/data/ds000114/sub-02/ses-retest/func/sub-02_ses-retest_task-fingerfootlips_bold.nii.gz&#39;, &#39;/data/ds000114/sub-02/ses-retest/func/sub-02_ses-retest_task-linebisection_bold.nii.gz&#39;, &#39;/data/ds000114/sub-02/ses-retest/func/sub-02_ses-retest_task-overtverbgeneration_bold.nii.gz&#39;, &#39;/data/ds000114/sub-02/ses-retest/func/sub-02_ses-retest_task-overtwordrepetition_bold.nii.gz&#39;, &#39;/data/ds000114/sub-02/ses-test/func/sub-02_ses-test_task-covertverbgeneration_bold.nii.gz&#39;, &#39;/data/ds000114/sub-02/ses-test/func/sub-02_ses-test_task-fingerfootlips_bold.nii.gz&#39;, &#39;/data/ds000114/sub-02/ses-test/func/sub-02_ses-test_task-linebisection_bold.nii.gz&#39;, &#39;/data/ds000114/sub-02/ses-test/func/sub-02_ses-test_task-overtverbgeneration_bold.nii.gz&#39;, &#39;/data/ds000114/sub-02/ses-test/func/sub-02_ses-test_task-overtwordrepetition_bold.nii.gz&#39;]
 
 
-170730-12:38:33,18 workflow INFO:
-	 Executing node BIDSDataGrabber.aI.a0 in dir: /tmp/tmp9ts9xswn/bids_demo/_subject_id_01/BIDSDataGrabber
-170730-12:38:40,562 workflow INFO:
-	 Executing node analyzeBOLD.a0 in dir: /tmp/tmpgisb1nx2/bids_demo/_subject_id_01/analyzeBOLD
+170904-05:41:40,147 workflow INFO:
+	 Executing node BIDSDataGrabber.aI.a0 in dir: /tmp/tmp_0qamd24/bids_demo/_subject_id_01/BIDSDataGrabber
+170904-05:41:40,523 workflow INFO:
+	 Executing node analyzeBOLD.a0 in dir: /tmp/tmp4b4yl0lk/bids_demo/_subject_id_01/analyzeBOLD
 
 
 analyzing [&#39;/data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-covertverbgeneration_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-fingerfootlips_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-linebisection_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-overtverbgeneration_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-overtwordrepetition_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-covertverbgeneration_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-fingerfootlips_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-linebisection_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-overtverbgeneration_bold.nii.gz&#39;, &#39;/data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-overtwordrepetition_bold.nii.gz&#39;]
@@ -12548,7 +12587,7 @@ analyzing [&#39;/data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-cov
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;networkx.classes.digraph.DiGraph at 0x7efca75eb240&gt;</pre>
+<pre>&lt;networkx.classes.digraph.DiGraph at 0x7f986846eef0&gt;</pre>
 </div>
 
 </div>
@@ -12684,172 +12723,50 @@ analyzing [&#39;/data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-cov
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>170730-12:38:40,658 workflow INFO:
+<pre>170904-05:41:52,762 workflow INFO:
 	 Workflow bids_demo settings: [&#39;check&#39;, &#39;execution&#39;, &#39;logging&#39;]
-170730-12:38:40,687 workflow INFO:
+170904-05:41:52,770 workflow INFO:
 	 Running serially.
-170730-12:38:40,689 workflow INFO:
-	 Executing node BIDSDataGrabber.aI.a1 in dir: /tmp/tmpsnrr85az/bids_demo/_subject_id_02/BIDSDataGrabber
-170730-12:38:48,740 workflow INFO:
-	 Executing node analyzeBOLD2.a1 in dir: /tmp/tmpkth33ium/bids_demo/_subject_id_02/analyzeBOLD2
-170730-12:38:48,782 workflow INFO:
-	 Executing node _analyzeBOLD20 in dir: /tmp/tmpkth33ium/bids_demo/_subject_id_02/analyzeBOLD2/mapflow/_analyzeBOLD20
+170904-05:41:52,771 workflow INFO:
+	 Executing node BIDSDataGrabber.aI.a1 in dir: /tmp/tmpo7ymsmt7/bids_demo/_subject_id_02/BIDSDataGrabber
+170904-05:41:53,149 workflow INFO:
+	 Executing node analyzeBOLD2.a1 in dir: /tmp/tmp6lfywdk6/bids_demo/_subject_id_02/analyzeBOLD2
+170904-05:41:53,154 workflow INFO:
+	 Executing node _analyzeBOLD20 in dir: /tmp/tmp6lfywdk6/bids_demo/_subject_id_02/analyzeBOLD2/mapflow/_analyzeBOLD20
 
 
 analyzing /data/ds000114/sub-02/ses-retest/func/sub-02_ses-retest_task-covertverbgeneration_bold.nii.gz
 TR: 2.5
 
 
-170730-12:38:55,755 workflow INFO:
-	 Executing node _analyzeBOLD21 in dir: /tmp/tmpkth33ium/bids_demo/_subject_id_02/analyzeBOLD2/mapflow/_analyzeBOLD21
+170904-05:41:53,532 workflow INFO:
+	 Executing node _analyzeBOLD21 in dir: /tmp/tmp6lfywdk6/bids_demo/_subject_id_02/analyzeBOLD2/mapflow/_analyzeBOLD21
 
 
 analyzing /data/ds000114/sub-02/ses-retest/func/sub-02_ses-retest_task-fingerfootlips_bold.nii.gz
 TR: 2.5
 
 
-170730-12:39:03,178 workflow INFO:
-	 Executing node _analyzeBOLD22 in dir: /tmp/tmpkth33ium/bids_demo/_subject_id_02/analyzeBOLD2/mapflow/_analyzeBOLD22
+...
 
 
-analyzing /data/ds000114/sub-02/ses-retest/func/sub-02_ses-retest_task-linebisection_bold.nii.gz
-TR: 2.5
-
-
-170730-12:39:11,683 workflow INFO:
-	 Executing node _analyzeBOLD23 in dir: /tmp/tmpkth33ium/bids_demo/_subject_id_02/analyzeBOLD2/mapflow/_analyzeBOLD23
-
-
-analyzing /data/ds000114/sub-02/ses-retest/func/sub-02_ses-retest_task-overtverbgeneration_bold.nii.gz
-TR: 5.0
-
-
-170730-12:39:20,364 workflow INFO:
-	 Executing node _analyzeBOLD24 in dir: /tmp/tmpkth33ium/bids_demo/_subject_id_02/analyzeBOLD2/mapflow/_analyzeBOLD24
-
-
-analyzing /data/ds000114/sub-02/ses-retest/func/sub-02_ses-retest_task-overtwordrepetition_bold.nii.gz
-TR: 5.0
-
-
-170730-12:39:28,723 workflow INFO:
-	 Executing node _analyzeBOLD25 in dir: /tmp/tmpkth33ium/bids_demo/_subject_id_02/analyzeBOLD2/mapflow/_analyzeBOLD25
-
-
-analyzing /data/ds000114/sub-02/ses-test/func/sub-02_ses-test_task-covertverbgeneration_bold.nii.gz
-TR: 2.5
-
-
-170730-12:39:35,888 workflow INFO:
-	 Executing node _analyzeBOLD26 in dir: /tmp/tmpkth33ium/bids_demo/_subject_id_02/analyzeBOLD2/mapflow/_analyzeBOLD26
-
-
-analyzing /data/ds000114/sub-02/ses-test/func/sub-02_ses-test_task-fingerfootlips_bold.nii.gz
-TR: 2.5
-
-
-170730-12:39:45,932 workflow INFO:
-	 Executing node _analyzeBOLD27 in dir: /tmp/tmpkth33ium/bids_demo/_subject_id_02/analyzeBOLD2/mapflow/_analyzeBOLD27
-
-
-analyzing /data/ds000114/sub-02/ses-test/func/sub-02_ses-test_task-linebisection_bold.nii.gz
-TR: 2.5
-
-
-170730-12:39:53,595 workflow INFO:
-	 Executing node _analyzeBOLD28 in dir: /tmp/tmpkth33ium/bids_demo/_subject_id_02/analyzeBOLD2/mapflow/_analyzeBOLD28
-
-
-analyzing /data/ds000114/sub-02/ses-test/func/sub-02_ses-test_task-overtverbgeneration_bold.nii.gz
-TR: 5.0
-
-
-170730-12:40:01,811 workflow INFO:
-	 Executing node _analyzeBOLD29 in dir: /tmp/tmpkth33ium/bids_demo/_subject_id_02/analyzeBOLD2/mapflow/_analyzeBOLD29
-
-
-analyzing /data/ds000114/sub-02/ses-test/func/sub-02_ses-test_task-overtwordrepetition_bold.nii.gz
-TR: 5.0
-
-
-170730-12:40:09,939 workflow INFO:
-	 Executing node BIDSDataGrabber.aI.a0 in dir: /tmp/tmp5b7xcyg9/bids_demo/_subject_id_01/BIDSDataGrabber
-170730-12:40:16,445 workflow INFO:
-	 Executing node analyzeBOLD2.a0 in dir: /tmp/tmpdtufksh9/bids_demo/_subject_id_01/analyzeBOLD2
-170730-12:40:16,465 workflow INFO:
-	 Executing node _analyzeBOLD20 in dir: /tmp/tmpdtufksh9/bids_demo/_subject_id_01/analyzeBOLD2/mapflow/_analyzeBOLD20
+170904-05:41:57,282 workflow INFO:
+	 Executing node BIDSDataGrabber.aI.a0 in dir: /tmp/tmph_gu82j_/bids_demo/_subject_id_01/BIDSDataGrabber
+170904-05:41:57,678 workflow INFO:
+	 Executing node analyzeBOLD2.a0 in dir: /tmp/tmpfqjrvc05/bids_demo/_subject_id_01/analyzeBOLD2
+170904-05:41:57,682 workflow INFO:
+	 Executing node _analyzeBOLD20 in dir: /tmp/tmpfqjrvc05/bids_demo/_subject_id_01/analyzeBOLD2/mapflow/_analyzeBOLD20
 
 
 analyzing /data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-covertverbgeneration_bold.nii.gz
 TR: 2.5
 
 
-170730-12:40:23,350 workflow INFO:
-	 Executing node _analyzeBOLD21 in dir: /tmp/tmpdtufksh9/bids_demo/_subject_id_01/analyzeBOLD2/mapflow/_analyzeBOLD21
+...
 
 
-analyzing /data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-fingerfootlips_bold.nii.gz
-TR: 2.5
-
-
-170730-12:40:30,849 workflow INFO:
-	 Executing node _analyzeBOLD22 in dir: /tmp/tmpdtufksh9/bids_demo/_subject_id_01/analyzeBOLD2/mapflow/_analyzeBOLD22
-
-
-analyzing /data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-linebisection_bold.nii.gz
-TR: 2.5
-
-
-170730-12:40:38,161 workflow INFO:
-	 Executing node _analyzeBOLD23 in dir: /tmp/tmpdtufksh9/bids_demo/_subject_id_01/analyzeBOLD2/mapflow/_analyzeBOLD23
-
-
-analyzing /data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-overtverbgeneration_bold.nii.gz
-TR: 5.0
-
-
-170730-12:40:46,41 workflow INFO:
-	 Executing node _analyzeBOLD24 in dir: /tmp/tmpdtufksh9/bids_demo/_subject_id_01/analyzeBOLD2/mapflow/_analyzeBOLD24
-
-
-analyzing /data/ds000114/sub-01/ses-retest/func/sub-01_ses-retest_task-overtwordrepetition_bold.nii.gz
-TR: 5.0
-
-
-170730-12:40:54,65 workflow INFO:
-	 Executing node _analyzeBOLD25 in dir: /tmp/tmpdtufksh9/bids_demo/_subject_id_01/analyzeBOLD2/mapflow/_analyzeBOLD25
-
-
-analyzing /data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-covertverbgeneration_bold.nii.gz
-TR: 2.5
-
-
-170730-12:41:02,275 workflow INFO:
-	 Executing node _analyzeBOLD26 in dir: /tmp/tmpdtufksh9/bids_demo/_subject_id_01/analyzeBOLD2/mapflow/_analyzeBOLD26
-
-
-analyzing /data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-fingerfootlips_bold.nii.gz
-TR: 2.5
-
-
-170730-12:41:10,618 workflow INFO:
-	 Executing node _analyzeBOLD27 in dir: /tmp/tmpdtufksh9/bids_demo/_subject_id_01/analyzeBOLD2/mapflow/_analyzeBOLD27
-
-
-analyzing /data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-linebisection_bold.nii.gz
-TR: 2.5
-
-
-170730-12:41:20,427 workflow INFO:
-	 Executing node _analyzeBOLD28 in dir: /tmp/tmpdtufksh9/bids_demo/_subject_id_01/analyzeBOLD2/mapflow/_analyzeBOLD28
-
-
-analyzing /data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-overtverbgeneration_bold.nii.gz
-TR: 5.0
-
-
-170730-12:41:29,458 workflow INFO:
-	 Executing node _analyzeBOLD29 in dir: /tmp/tmpdtufksh9/bids_demo/_subject_id_01/analyzeBOLD2/mapflow/_analyzeBOLD29
+170904-05:42:01,372 workflow INFO:
+	 Executing node _analyzeBOLD29 in dir: /tmp/tmpfqjrvc05/bids_demo/_subject_id_01/analyzeBOLD2/mapflow/_analyzeBOLD29
 
 
 analyzing /data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-overtwordrepetition_bold.nii.gz
@@ -12866,7 +12783,7 @@ TR: 5.0
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;networkx.classes.digraph.DiGraph at 0x7efca7cab668&gt;</pre>
+<pre>&lt;networkx.classes.digraph.DiGraph at 0x7f9895239630&gt;</pre>
 </div>
 
 </div>

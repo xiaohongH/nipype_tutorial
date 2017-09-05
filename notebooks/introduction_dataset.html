@@ -11654,8 +11654,10 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11666,9 +11668,11 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11909,12 +11913,39 @@ datalad get derivatives/fmriprep/sub-*/ses-test/func/*fingerfootlips*
 ├── dataset_description.json
 ├── derivatives
 │   ├── fmriprep
+│   │   ├── mni_icbm152_nlin_asym_09c
+│   │   │   ├── 1mm_brainmask.nii.gz
+│   │   │   ├── 1mm_eyemask.nii.gz
+│   │   │   ├── 1mm_facemask.nii.gz
+│   │   │   ├── 1mm_headmask.nii.gz
+│   │   │   ├── 1mm_parc.nii.gz
+│   │   │   ├── 1mm_PD.nii.gz
+│   │   │   ├── 1mm_PD_orig.nii.gz
+│   │   │   ├── 1mm_T1.nii.gz
+│   │   │   ├── 1mm_T1_orig.nii.gz
+│   │   │   ├── 1mm_T2.nii.gz
+│   │   │   ├── 1mm_T2_orig.nii.gz
+│   │   │   ├── 1mm_tpm_csf.nii.gz
+│   │   │   ├── 1mm_tpm_gm.nii.gz
+│   │   │   ├── 1mm_tpm_wm.nii.gz
+│   │   │   ├── 2mm_brainmask.nii.gz
+│   │   │   ├── 2mm_eyemask.nii.gz
+│   │   │   ├── 2mm_facemask.nii.gz
+│   │   │   ├── 2mm_headmask.nii.gz
+│   │   │   ├── 2mm_parc.nii.gz
+│   │   │   ├── 2mm_PD.nii.gz
+│   │   │   ├── 2mm_T1.nii.gz
+│   │   │   ├── 2mm_T2.nii.gz
+│   │   │   ├── 2mm_tpm_csf.nii.gz
+│   │   │   ├── 2mm_tpm_gm.nii.gz
+│   │   │   ├── 2mm_tpm_wm.nii.gz
+│   │   │   └── scripts
 │   │   ├── sub-01
 │   │   │   ├── anat
 │   │   │   ├── ses-retest
 │   │   │   └── ses-test
 │   │   ├── sub-01.html
-│   │   ├── sub-02..sub-10
+│   │   └── sub-02...sub-10
 │   └── freesurfer
 │       ├── fsaverage
 │       │   ├── label
@@ -11923,6 +11954,14 @@ datalad get derivatives/fmriprep/sub-*/ses-test/func/*fingerfootlips*
 │       │   ├── scripts
 │       │   ├── surf
 │       │   └── xhemi
+│       ├── fsaverage5
+│       │   ├── label
+│       │   ├── lh.reg.template.tif
+│       │   ├── mri
+│       │   ├── rh.reg.template.tif
+│       │   ├── scripts
+│       │   ├── stats
+│       │   └── surf
 │       ├── sub-01
 │       │   ├── label
 │       │   ├── mri
@@ -11930,7 +11969,7 @@ datalad get derivatives/fmriprep/sub-*/ses-test/func/*fingerfootlips*
 │       │   ├── stats
 │       │   ├── surf
 │       │   └── touch
-│       └── sub-02..sub-10
+│       └── sub-02...sub-10
 ├── dwi.bval
 ├── dwi.bvec
 ├── sub-01
@@ -11958,7 +11997,7 @@ datalad get derivatives/fmriprep/sub-*/ses-test/func/*fingerfootlips*
 │           ├── sub-01_ses-test_task-linebisection_events.tsv
 │           ├── sub-01_ses-test_task-overtverbgeneration_bold.nii.gz
 │           └── sub-01_ses-test_task-overtwordrepetition_bold.nii.gz
-├── sub-02..sub-10
+├── sub-02...sub-10
 ├── task-covertverbgeneration_bold.json
 ├── task-covertverbgeneration_events.tsv
 ├── task-fingerfootlips_bold.json
@@ -11969,7 +12008,7 @@ datalad get derivatives/fmriprep/sub-*/ses-test/func/*fingerfootlips*
 ├── task-overtwordrepetition_bold.json
 └── task-overtwordrepetition_events.tsv
 
-216 directories, 185 files
+218 directories, 210 files
 </pre>
 </div>
 </div>
@@ -12039,10 +12078,6 @@ datalad get derivatives/fmriprep/sub-*/ses-test/func/*fingerfootlips*
 61.893		1		1.0	No_Response_Control
 63.533		1		1.0	Response_Control
 65.173		1		1.0	Response_Control
-66.8129		1		1.0	Response_Control
-68.4529		1		1.0	Response_Control
-70.0929		1		1.0	Response_Control
-71.7329		1		1.0	No_Response_Control
 ...
 522.5041	1		1.0	No_Response_Control
 524.1441	1		1.0	Response_Control
