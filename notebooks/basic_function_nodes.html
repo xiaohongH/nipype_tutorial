@@ -11821,35 +11821,6 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>170904-05:44:35,413 workflow INFO:
-	 Executing node add_node in dir: /tmp/tmpppthnq4p/add_node
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[&nbsp;]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>
-val_output = 6</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -11913,28 +11884,6 @@ Interface Function failed to run.
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>170904-05:44:35,445 workflow INFO:
-	 Executing node rndArray_node in dir: /tmp/tmphzdxcrk5/rndArray_node
-
-random_array = [[ 0.14761855  0.73302764  0.62524247]
- [ 0.50316618  0.31536037  0.91529448]
- [ 0.8736496   0.80276958  0.603741  ]]
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -11979,86 +11928,6 @@ random_array = [[ 0.14761855  0.73302764  0.62524247]
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>170904-05:44:35,473 workflow INFO:
-	 Executing node rndArray_node in dir: /tmp/tmp80g1x7z1/rndArray_node
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-3-96943c3aa6f2&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     20</span> 
-<span class="ansi-green-intense-fg ansi-bold">     21</span> <span class="ansi-red-fg"># Run node</span>
-<span class="ansi-green-fg">---&gt; 22</span><span class="ansi-red-fg"> </span>rndArray<span class="ansi-blue-fg">.</span>run<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     23</span> 
-<span class="ansi-green-intense-fg ansi-bold">     24</span> <span class="ansi-red-fg"># Print output</span>
-
-<span class="ansi-green-fg">/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/pipeline/engine/nodes.py</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(self, updatehash)</span>
-<span class="ansi-green-intense-fg ansi-bold">    370</span>                     self.inputs.get_traitsfree())
-<span class="ansi-green-intense-fg ansi-bold">    371</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 372</span><span class="ansi-red-fg">                 </span>self<span class="ansi-blue-fg">.</span>_run_interface<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    373</span>             <span class="ansi-green-fg">except</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    374</span>                 os<span class="ansi-blue-fg">.</span>remove<span class="ansi-blue-fg">(</span>hashfile_unfinished<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/pipeline/engine/nodes.py</span> in <span class="ansi-cyan-fg">_run_interface</span><span class="ansi-blue-fg">(self, execute, updatehash)</span>
-<span class="ansi-green-intense-fg ansi-bold">    480</span>         old_cwd <span class="ansi-blue-fg">=</span> os<span class="ansi-blue-fg">.</span>getcwd<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    481</span>         os<span class="ansi-blue-fg">.</span>chdir<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>output_dir<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 482</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_result <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_run_command<span class="ansi-blue-fg">(</span>execute<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    483</span>         os<span class="ansi-blue-fg">.</span>chdir<span class="ansi-blue-fg">(</span>old_cwd<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    484</span> 
-
-<span class="ansi-green-fg">/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/pipeline/engine/nodes.py</span> in <span class="ansi-cyan-fg">_run_command</span><span class="ansi-blue-fg">(self, execute, copyfiles)</span>
-<span class="ansi-green-intense-fg ansi-bold">    611</span>                 logger<span class="ansi-blue-fg">.</span>info<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Running: %s&#39;</span> <span class="ansi-blue-fg">%</span> cmd<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    612</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 613</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_interface<span class="ansi-blue-fg">.</span>run<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    614</span>             <span class="ansi-green-fg">except</span> Exception <span class="ansi-green-fg">as</span> msg<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    615</span>                 self<span class="ansi-blue-fg">.</span>_save_results<span class="ansi-blue-fg">(</span>result<span class="ansi-blue-fg">,</span> cwd<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/interfaces/base.py</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(self, **inputs)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1082</span>                         version=self.version)
-<span class="ansi-green-intense-fg ansi-bold">   1083</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 1084</span><span class="ansi-red-fg">             </span>runtime <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_run_wrapper<span class="ansi-blue-fg">(</span>runtime<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1085</span>             outputs <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>aggregate_outputs<span class="ansi-blue-fg">(</span>runtime<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1086</span>             runtime<span class="ansi-blue-fg">.</span>endTime <span class="ansi-blue-fg">=</span> dt<span class="ansi-blue-fg">.</span>isoformat<span class="ansi-blue-fg">(</span>dt<span class="ansi-blue-fg">.</span>utcnow<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/interfaces/base.py</span> in <span class="ansi-cyan-fg">_run_wrapper</span><span class="ansi-blue-fg">(self, runtime)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1030</span>             runtime<span class="ansi-blue-fg">.</span>environ<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;DISPLAY&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;:%d&#39;</span> <span class="ansi-blue-fg">%</span> vdisp_num
-<span class="ansi-green-intense-fg ansi-bold">   1031</span> 
-<span class="ansi-green-fg">-&gt; 1032</span><span class="ansi-red-fg">         </span>runtime <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_run_interface<span class="ansi-blue-fg">(</span>runtime<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1033</span> 
-<span class="ansi-green-intense-fg ansi-bold">   1034</span>         <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_redirect_x<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/opt/conda/envs/neuro3/lib/python3.6/site-packages/nipype/interfaces/utility/wrappers.py</span> in <span class="ansi-cyan-fg">_run_interface</span><span class="ansi-blue-fg">(self, runtime)</span>
-<span class="ansi-green-intense-fg ansi-bold">    190</span>             setattr<span class="ansi-blue-fg">(</span>runtime<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;runtime_threads&#39;</span><span class="ansi-blue-fg">,</span> num_threads<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    191</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 192</span><span class="ansi-red-fg">             </span>out <span class="ansi-blue-fg">=</span> function_handle<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">**</span>args<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    193</span> 
-<span class="ansi-green-intense-fg ansi-bold">    194</span>         <span class="ansi-green-fg">if</span> len<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_output_names<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">&lt;string&gt;</span> in <span class="ansi-cyan-fg">get_random_array</span><span class="ansi-blue-fg">(array_shape)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;random&#39; is not defined
-Interface Function failed to run. </pre>
-</div>
-</div>
-
 </div>
 </div>
 
