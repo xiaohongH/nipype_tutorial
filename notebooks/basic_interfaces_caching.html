@@ -11790,7 +11790,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Memory-caching">Memory caching<a class="anchor-link" href="#Memory-caching">&#182;</a></h1><p>In <a href="basic_worflow.html">Workflow notebook</a> you learnt about <code>Workflows</code> that specify processing by an execution graph and offer efficient recomputing. However, sometimes you might want to use <code>Interfaces</code> that gives better control of the execution of each step and can be easily combine with any Python code. Unfortunately, <code>Interfaces</code> do not offer any caching and you always dully recompute your task.</p>
 <p>Solution to this problem can be a <code>caching</code> mechanism supported by Nipype. Nipype caching relies on the <code>Memory</code> class and creates an execution context that is bound to a disk cache.
-When you instantiate the class you should provide <code>base_dir</code> and additional subdirectory called <code>nipype_mem</code> will be automatically created.</p>
+When you instantiate the class you should provide <code>base_dir</code> (that has to be an existing directory) and additional subdirectory called <code>nipype_mem</code> will be automatically created.</p>
 
 </div>
 </div>
@@ -11800,8 +11800,22 @@ When you instantiate the class you should provide <code>base_dir</code> and addi
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span>%%bash
+mkdir -p /output/workingdir_mem
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nipype.caching</span> <span class="k">import</span> <span class="n">Memory</span>
-<span class="n">mem</span> <span class="o">=</span> <span class="n">Memory</span><span class="p">(</span><span class="n">base_dir</span><span class="o">=</span><span class="s1">&#39;/output/workingdir&#39;</span><span class="p">)</span>
+<span class="n">mem</span> <span class="o">=</span> <span class="n">Memory</span><span class="p">(</span><span class="n">base_dir</span><span class="o">=</span><span class="s1">&#39;/output/workingdir_mem&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11873,7 +11887,7 @@ When you instantiate the class you should provide <code>base_dir</code> and addi
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> ls -l /output/workingdir/nipype_mem
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> ls -l /output/workingdir_mem/nipype_mem
 </pre></div>
 
 </div>

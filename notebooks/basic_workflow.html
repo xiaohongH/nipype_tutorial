@@ -11941,7 +11941,7 @@ fslmaths /output/<span class="si">${</span><span class="nv">ANAT_NAME</span><spa
 
 <span class="c1"># Masking process</span>
 <span class="n">mask</span> <span class="o">=</span> <span class="n">fsl</span><span class="o">.</span><span class="n">ApplyMask</span><span class="p">(</span>
-    <span class="n">in_file</span><span class="o">=</span><span class="s2">&quot;/data/ds000114/sub-02/ses-test/anat/sub-02_ses-test_T1w.nii.gz&quot;</span><span class="p">,</span>
+    <span class="n">in_file</span><span class="o">=</span><span class="s2">&quot;/output/sub-02_T1w_smooth.nii.gz&quot;</span><span class="p">,</span>
     <span class="n">out_file</span><span class="o">=</span><span class="s2">&quot;/output/sub-02_T1w_smooth_mask.nii.gz&quot;</span><span class="p">,</span>
     <span class="n">mask_file</span><span class="o">=</span><span class="s2">&quot;/output/sub-02_T1w_brain_mask.nii.gz&quot;</span><span class="p">)</span>
 <span class="n">mask</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>

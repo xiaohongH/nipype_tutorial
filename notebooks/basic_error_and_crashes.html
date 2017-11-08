@@ -11800,9 +11800,24 @@ div#notebook {
 <li>You try to <strong>connect</strong> a node to an input field that another node is <strong>already connected</strong> to.</li>
 </ol>
 <p><strong>Important</strong> note about <code>crashfiles</code>. <code>Crashfiles</code> are only created when you run a workflow, not during building a workflow. If you have a typo in a folder path, because they didn't happen during runtime, but still during workflow building.</p>
+<p>We will start from removing old <code>crashfiles</code>:</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span>%%bash
+rm <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/crash-*
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -11856,8 +11871,13 @@ div#notebook {
 <span class="n">wf</span><span class="o">.</span><span class="n">connect</span><span class="p">([(</span><span class="n">sf</span><span class="p">,</span> <span class="n">mcflirt</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;func&quot;</span><span class="p">,</span> <span class="s2">&quot;in_file&quot;</span><span class="p">)]),</span>
             <span class="p">(</span><span class="n">mcflirt</span><span class="p">,</span> <span class="n">smooth</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;out_file&quot;</span><span class="p">,</span> <span class="s2">&quot;in_file&quot;</span><span class="p">)])])</span>
 
-<span class="c1"># Let&#39;s the workflow</span>
-<span class="n">wf</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="c1"># Let&#39;s run the workflow</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">wf</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="k">except</span><span class="p">(</span><span class="ne">RuntimeError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RuntimeError:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span>
 </pre></div>
 
 </div>
@@ -11954,7 +11974,12 @@ Interface SelectFiles failed to run.
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">wf</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;execution&#39;</span><span class="p">][</span><span class="s1">&#39;crashfile_format&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;txt&#39;</span>
-<span class="n">wf</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">wf</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="k">except</span><span class="p">(</span><span class="ne">RuntimeError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RuntimeError:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span>
 </pre></div>
 
 </div>
@@ -12001,7 +12026,15 @@ Interface SelectFiles failed to run.
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nipype.interfaces.fsl</span> <span class="k">import</span> <span class="n">IsotropicSmooth</span>
-<span class="n">smooth</span> <span class="o">=</span> <span class="n">IsotropicSmooth</span><span class="p">(</span><span class="n">fwhm</span><span class="o">=</span><span class="s1">&#39;4&#39;</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">smooth</span> <span class="o">=</span> <span class="n">IsotropicSmooth</span><span class="p">(</span><span class="n">fwhm</span><span class="o">=</span><span class="s1">&#39;4&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">(</span><span class="ne">Exception</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;TraitError&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="vm">__class__</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TraitError:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span>
 </pre></div>
 
 </div>
@@ -12051,7 +12084,15 @@ Interface SelectFiles failed to run.
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nipype.interfaces.fsl</span> <span class="k">import</span> <span class="n">IsotropicSmooth</span>
-<span class="n">smooth</span> <span class="o">=</span> <span class="n">IsotropicSmooth</span><span class="p">(</span><span class="n">output_type</span><span class="o">=</span><span class="s1">&#39;NIFTIiii&#39;</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">smooth</span> <span class="o">=</span> <span class="n">IsotropicSmooth</span><span class="p">(</span><span class="n">output_type</span><span class="o">=</span><span class="s1">&#39;NIFTIiii&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">(</span><span class="ne">Exception</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;TraitError&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="vm">__class__</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TraitError:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span>
 </pre></div>
 
 </div>
@@ -12081,7 +12122,16 @@ Interface SelectFiles failed to run.
          <span class="s1">&#39;/data/ds000114/sub-02/ses-test/func/sub-02_ses-test_task-fingerfootlips_bold.nii.gz&#39;</span><span class="p">]</span>
 
 <span class="n">gunzip</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="n">Gunzip</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;gunzip&#39;</span><span class="p">,)</span>
-<span class="n">gunzip</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">in_file</span> <span class="o">=</span> <span class="n">files</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">gunzip</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">in_file</span> <span class="o">=</span> <span class="n">files</span>
+<span class="k">except</span><span class="p">(</span><span class="ne">Exception</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;TraitError&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="vm">__class__</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TraitError:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span>
 </pre></div>
 
 </div>
@@ -12119,9 +12169,7 @@ Interface SelectFiles failed to run.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, make sure that you specify files that actually exist, otherwise you can the same problem as in crash example 1, but this time labeled as <code>TraitError</code>:</p>
-
-<pre><code>TraitError: Each element of the 'in_file' trait of a DynamicTraitedSpec instance must be an existing file name, but a value of '/data/ds102/sub-06/func/sub-06_task-flanker_run-1_bold.nii.gz' &lt;type 'str'&gt; was specified.</code></pre>
+<p>Now, make sure that you specify files that actually exist, otherwise you will have a <code>TraitError</code> again:</p>
 
 </div>
 </div>
@@ -12133,7 +12181,16 @@ Interface SelectFiles failed to run.
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;/data/ds000114/sub-01/func/sub-01_task-fingerfootlips_bold.nii.gz&#39;</span><span class="p">,</span>
          <span class="s1">&#39;/data/ds000114/sub-03/func/sub-03_task-fingerfootlips_bold.nii.gz&#39;</span><span class="p">]</span>
-<span class="n">gunzip</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">in_file</span> <span class="o">=</span> <span class="n">files</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">gunzip</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">in_file</span> <span class="o">=</span> <span class="n">files</span>
+<span class="k">except</span><span class="p">(</span><span class="ne">Exception</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;TraitError&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="vm">__class__</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TraitError:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span>
 </pre></div>
 
 </div>
@@ -12168,8 +12225,16 @@ Interface SelectFiles failed to run.
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nipype.interfaces.spm</span> <span class="k">import</span> <span class="n">Smooth</span>
-<span class="n">smooth</span> <span class="o">=</span> <span class="n">Smooth</span><span class="p">(</span><span class="n">in_files</span><span class="o">=</span><span class="s1">&#39;/data/ds000114/sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz&#39;</span><span class="p">)</span>
-<span class="n">smooth</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">smooth</span> <span class="o">=</span> <span class="n">Smooth</span><span class="p">(</span><span class="n">in_files</span><span class="o">=</span><span class="s1">&#39;/data/ds000114/sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">(</span><span class="ne">Exception</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;TraitError&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="vm">__class__</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TraitError:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span>
 </pre></div>
 
 </div>
@@ -12193,8 +12258,16 @@ Interface SelectFiles failed to run.
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nipype.interfaces.spm</span> <span class="k">import</span> <span class="n">Realign</span>
-<span class="n">realign</span> <span class="o">=</span> <span class="n">Realign</span><span class="p">(</span><span class="n">in_files</span><span class="o">=</span><span class="s1">&#39;/data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-fingerfootlips_bold.nii.gz&#39;</span><span class="p">)</span>
-<span class="n">realign</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">realign</span> <span class="o">=</span> <span class="n">Realign</span><span class="p">(</span><span class="n">in_files</span><span class="o">=</span><span class="s1">&#39;/data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-fingerfootlips_bold.nii.gz&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">(</span><span class="ne">Exception</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;TraitError&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="vm">__class__</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TraitError:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span>
 </pre></div>
 
 </div>
@@ -12269,7 +12342,13 @@ SPM not in matlab path
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nipype.interfaces.spm</span> <span class="k">import</span> <span class="n">Realign</span>
 <span class="n">realign</span> <span class="o">=</span> <span class="n">Realign</span><span class="p">(</span><span class="n">register_to_mean</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">realign</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">realign</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="k">except</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ValueError:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span>
 </pre></div>
 
 </div>
@@ -12328,9 +12407,17 @@ SPM not in matlab path
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nipype.interfaces.afni</span> <span class="k">import</span> <span class="n">Despike</span>
-<span class="n">despike</span> <span class="o">=</span> <span class="n">Despike</span><span class="p">(</span><span class="n">in_file</span><span class="o">=</span><span class="s1">&#39;/data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-fingerfootlips_bold.nii.gz&#39;</span><span class="p">,</span>
-                  <span class="n">output_type</span><span class="o">=</span><span class="s1">&#39;NIFTI&#39;</span><span class="p">)</span>
-<span class="n">despike</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">despike</span> <span class="o">=</span> <span class="n">Despike</span><span class="p">(</span><span class="n">in_file</span><span class="o">=</span><span class="s1">&#39;/data/ds000114/sub-01/ses-test/func/sub-01_ses-test_task-fingerfootlips_bold.nii.gz&#39;</span><span class="p">,</span>
+                      <span class="n">output_type</span><span class="o">=</span><span class="s1">&#39;NIFTI&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">(</span><span class="ne">Exception</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;TraitError&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="vm">__class__</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TraitError:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span>
 </pre></div>
 
 </div>
@@ -12423,7 +12510,12 @@ SPM not in matlab path
                    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;mcflirt_NEW&#39;</span><span class="p">)</span>
 
 <span class="c1"># Connect it to an already connected input field</span>
-<span class="n">wf</span><span class="o">.</span><span class="n">connect</span><span class="p">([(</span><span class="n">mcflirt_NEW</span><span class="p">,</span> <span class="n">smooth</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;out_file&quot;</span><span class="p">,</span> <span class="s2">&quot;in_file&quot;</span><span class="p">)])])</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">wf</span><span class="o">.</span><span class="n">connect</span><span class="p">([(</span><span class="n">mcflirt_NEW</span><span class="p">,</span> <span class="n">smooth</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;out_file&quot;</span><span class="p">,</span> <span class="s2">&quot;in_file&quot;</span><span class="p">)])])</span>
+<span class="k">except</span><span class="p">(</span><span class="ne">Exception</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exception:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span>
 </pre></div>
 
 </div>

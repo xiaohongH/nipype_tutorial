@@ -11921,10 +11921,12 @@ Interface Function failed to run.
 <span class="n">rndArray</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">array_shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
 <span class="c1"># Run node</span>
-<span class="n">rndArray</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-
-<span class="c1"># Print output</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">rndArray</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">outputs</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">rndArray</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="k">except</span><span class="p">(</span><span class="ne">NameError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NameError:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span>
 </pre></div>
 
 </div>
