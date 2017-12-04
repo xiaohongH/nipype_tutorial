@@ -11726,9 +11726,7 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}
-
-@media print {
+}@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11749,7 +11747,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11783,8 +11781,7 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11794,8 +11791,7 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11804,8 +11800,7 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11825,8 +11820,7 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11842,8 +11836,7 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11868,12 +11861,25 @@ div#notebook {
 <li><code>jupyter notebook</code> tells that you want to run directly the jupyter notebook command within the container. Alternatively, you can also use <code>jupyter-lab</code>, <code>bash</code> or <code>ipython</code>.</li>
 </ul>
 <p><strong>Note</strong> that when you run this docker image without any more specification, than it will prompt you a URL link in your terminal that you will need to copy paste into your browser to get to the notebooks.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Run-a-docker-image-on-Linux-or-Mac">Run a docker image on Linux or Mac<a class="anchor-link" href="#Run-a-docker-image-on-Linux-or-Mac">&#182;</a></h2><p>Running a docker image on a Linux or Mac OS is very simple. Make sure that the folders <code>tutorial</code>, <code>data</code> and <code>output</code> exist. Then just open a new terminal and use the command from above. Once the docker image is downloaded, open the shown URL link in your browser and you are good to go. The URL will look something like:</p>
 
-<pre><code>http://localhost:8888/?token=0312c1ef3b61d7a44ff5346d3d150c23249a548850e13868
+<pre><code>http://localhost:8888/?token=0312c1ef3b61d7a44ff5346d3d150c23249a548850e13868</code></pre>
 
-
-</code></pre>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Run-a-docker-image-on-Windows">Run a docker image on Windows<a class="anchor-link" href="#Run-a-docker-image-on-Windows">&#182;</a></h2><p>Running a docker image on Windows is a bit trickier than on Ubuntu. Assuming you've installed the DockerToolbox, open the Docker Quickstart Terminal. Once the docker terminal is ready (when you see the whale), execute the following steps (see also figure):</p>
 <ol>
 <li><p>We need to check the IP adress of your docker machine. For this, use the command:</p>
@@ -11898,8 +11904,7 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11909,19 +11914,45 @@ div#notebook {
 
 </code></pre>
 <p>This also works with other software commands, such as <code>bet</code> etc.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Stop-Docker-Container">Stop Docker Container<a class="anchor-link" href="#Stop-Docker-Container">&#182;</a></h2><p>To stop a running docker container, either close the docker terminal or select the terminal and uste the <code>Ctrl-C</code> shortcut multiple times.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="List-all-installed-docker-images">List all installed docker images<a class="anchor-link" href="#List-all-installed-docker-images">&#182;</a></h2><p>To see a list of all installed docker images use:</p>
 
-<pre><code>docker images
+<pre><code>docker images</code></pre>
 
-
-</code></pre>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Delete-a-specific-docker-image">Delete a specific docker image<a class="anchor-link" href="#Delete-a-specific-docker-image">&#182;</a></h2><p>To delete a specific docker image, first use the <code>docker images</code> command to list all installed containers and than use the <code>IMAGE ID</code> and the <code>rmi</code> instruction to delete the container:</p>
 
-<pre><code>docker rmi -f 7d9495d03763
+<pre><code>docker rmi -f 7d9495d03763</code></pre>
 
-
-</code></pre>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Export-and-Import-a-docker-image">Export and Import a docker image<a class="anchor-link" href="#Export-and-Import-a-docker-image">&#182;</a></h2><p>If you don't want to depend on a internet connection, you can also export an already downloaded docker image and than later on import it on another PC. To do so, use the following two commands:</p>
 
 <pre><code># Export docker image djarecka/nipype_tutorial
