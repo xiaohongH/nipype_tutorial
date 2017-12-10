@@ -1,6 +1,6 @@
 # Nipype Tutorial Notebooks
 
-First notebook is for a basic preprocessing and GLM analyis of block design experiments.
+Notebooks for a basic preprocessing and GLM analyis of block design experiments.
 
 # Thanks and Acknowledgment
 
