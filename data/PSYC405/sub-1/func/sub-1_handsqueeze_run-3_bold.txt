@@ -1,1 +1,0 @@
-/home/arash/Downloads/sub1/PSYCH405.MR.BOYACILAB_DEMO_EXAMS.0003.0029.2015.10.27.14.20.19.937500.128383295.IMA	Field Strength:	3	ProtocolName:	ep2dboldTR2	ScanningSequence00180020:	EP	TE:	35	TR:	2000	SeriesNum:	3	AcquNum:	1	ImageNum:	29	ImageComments:		DateTime:	27-10-15 13:06:18	Name:	PSYCH405	PatientHistory:		DoB:	19880103	Gender:	F 	Age(Years):	27.8145237	DimXYZT:	64	64	28	24
